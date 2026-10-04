@@ -131,6 +131,18 @@
     thisMonth:thisMonth, openThisMonth:openThisMonth, primaryType:primaryType, typeStyle:typeStyle,
     pinIcon:pinIcon, basemap:basemap, countyOutline:countyOutline, fmtDate:fmtDate, directions:directions, providerUrl:providerUrl };
 
-  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", mountChrome);
-  else mountChrome();
+  // Real height of the banner + header, so full-height layouts (the Find Food map) fit
+  // the screen exactly even when the banner wraps or the text is enlarged.
+  function measureChrome(){
+    var h = 0;
+    [".draft", ".site-header"].forEach(function(sel){
+      var el = document.querySelector(sel);
+      if(el) h += el.getBoundingClientRect().height;
+    });
+    if(h) document.documentElement.style.setProperty("--chrome", Math.round(h) + "px");
+  }
+  function start(){ mountChrome(); measureChrome(); window.addEventListener("resize", measureChrome); }
+
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
 })();
