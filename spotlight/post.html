@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" data-root="..">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spotlight · Chaffee Provides</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="spotlight/index.html">
+<div id="site-header"></div>
+<main id="main"><article class="article" id="post"><p class="muted">Loading…</p></article></main>
+<div id="site-footer"></div>
+<script src="../assets/app.js"></script>
+<script>
+(function(){
+  var esc = CP.esc, el = document.getElementById("post");
+  var slug = new URLSearchParams(location.search).get("slug");
+  CP.load("posts").then(function(d){
+    var i = d.posts.findIndex(function(p){ return p.slug === slug; });
+    var p = d.posts[i];
+    if(!p){ el.innerHTML = '<p>Post not found. <a href="index.html">All stories →</a></p>'; return; }
+    document.title = p.title + " · Chaffee Provides";
+    var body;
+    if(p.body){
+      // Post bodies link site pages relative to the site root; this page lives one level down.
+      var tmp = document.createElement("div"); tmp.innerHTML = p.body;
+      tmp.querySelectorAll("a[href]").forEach(function(a){
+        var h = a.getAttribute("href");
+        if(!/^(https?:|mailto:|tel:|#|\/)/.test(h)) a.setAttribute("href", "../" + h);
+      });
+      body = tmp.innerHTML
+        + (p.sources ? '<div class="callout"><strong>Sources checked for this post</strong><ul>'
+            + p.sources.map(function(s){ return '<li><a href="'+esc(s)+'" target="_blank" rel="noopener">'+esc(s.replace(/^https?:\/\//,""))+'</a></li>'; }).join("")
+            + '</ul></div>' : '');
+    } else {
+      body = '<p style="font-size:1.15rem">'+esc(p.excerpt)+'</p>'
+        + '<p><a class="btn btn-primary" href="'+esc(p.original)+'" target="_blank" rel="noopener">Read the full story on ChaffeeProvides.org ↗</a></p>'
+        + '<div class="callout muted" style="font-size:.92rem"><strong>Migration placeholder.</strong> This story was published on '+esc(CP.fmtDate(p.date))
+        + '. In the finished site its full text and photos will be imported from the original WordPress export, keeping this address and redirecting the old one.</div>';
+    }
+    var prev = d.posts[i+1], next = d.posts[i-1];
+    el.innerHTML = '<nav class="crumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="index.html">Spotlight</a></nav>'
+      + '<h1>'+esc(p.title)+'</h1>'
+      + '<p class="meta">'+esc(CP.fmtDate(p.date))+(p.draft ? ' · <span class="badge-new">New · draft for review</span>' : ' · Featured Land &amp; People')+'</p>'
+      + '<img class="hero-img" src="'+esc(p.image)+'" alt="'+esc(p.alt)+'" loading="lazy">'
+      + body
+      + '<hr style="border:0;border-top:1px solid var(--line);margin:36px 0 18px">'
+      + '<div style="display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap">'
+      + (prev ? '<a href="post.html?slug='+encodeURIComponent(prev.slug)+'">← '+esc(prev.title)+'</a>' : '<span></span>')
+      + (next ? '<a href="post.html?slug='+encodeURIComponent(next.slug)+'">'+esc(next.title)+' →</a>' : '')
+      + '</div>';
+  });
+})();
+</script>
+</body>
+</html>

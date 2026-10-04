@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-root=".">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>List Your Business · Chaffee Provides</title>
+<meta name="description" content="Free listing for Chaffee County farms, ranches, markets, restaurants and food-access organizations.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="list-your-business.html">
+<div id="site-header"></div>
+<main id="main">
+  <article class="article">
+    <h1>List your business, free</h1>
+    <p style="font-size:1.1rem">Farms, ranches, markets, restaurants, retailers and food-access groups in and around Chaffee County can be listed at no cost. This form adds the things the old one didn't ask for, like <strong>hours and season</strong>, so customers know when to come.</p>
+    <div class="notice-box"><strong>Draft form.</strong> In this preview, submitting opens an email with your answers filled in. At launch it would feed a reviewed intake queue (the same process the Colorado Farm Trail uses), and approved changes become permanent corrections that later data updates won't overwrite.</div>
+    <form class="form" id="f" novalidate>
+      <label>Business name * <input name="name" required autocomplete="organization"></label>
+      <label>Type *
+        <select name="type" required>
+          <option value="">Choose one</option>
+          <option>Farm</option><option>Ranch</option><option>Market or shop</option><option>Restaurant</option>
+          <option>Food bank or pantry</option><option>Organization or nonprofit</option>
+        </select></label>
+      <fieldset><legend>What do you offer?</legend>
+        <label><input type="checkbox" name="offer" value="Veggies"> Veggies</label>
+        <label><input type="checkbox" name="offer" value="Fruit"> Fruit</label>
+        <label><input type="checkbox" name="offer" value="Beef/Meat"> Beef &amp; meat</label>
+        <label><input type="checkbox" name="offer" value="Poultry/Eggs"> Poultry &amp; eggs</label>
+        <label><input type="checkbox" name="offer" value="Dairy"> Dairy</label>
+        <label><input type="checkbox" name="offer" value="Flowers"> Flowers</label>
+        <label><input type="checkbox" name="offer" value="Honey"> Honey</label>
+        <label><input type="checkbox" name="offer" value="Spices/Garlic"> Spices &amp; garlic</label>
+        <label><input type="checkbox" name="offer" value="Staples"> Pantry staples</label>
+      </fieldset>
+      <label>Street address <input name="address" autocomplete="street-address"></label>
+      <label>Town *
+        <select name="town" required>
+          <option value="">Choose one</option>
+          <option>Salida</option><option>Buena Vista</option><option>Poncha Springs</option><option>Nathrop</option>
+          <option>Granite</option><option>Monarch</option><option>Howard</option><option>Cotopaxi</option><option>Cañon City</option><option>Other</option>
+        </select></label>
+      <label><span><input type="checkbox" name="hide"> Don't show my street address (pickup by arrangement)</span></label>
+      <label>Hours <input name="hours" placeholder="e.g. Sat 9–1; farm stand Mon 4–6"></label>
+      <label>Season <input name="season" placeholder="e.g. June–October, or year-round"></label>
+      <label>Phone * <input name="phone" type="tel" required autocomplete="tel"></label>
+      <label>Email <input name="email" type="email" autocomplete="email"></label>
+      <label>Website or social page <input name="website" type="url" placeholder="https://"></label>
+      <label>Do you accept SNAP/EBT?
+        <select name="snap"><option value="">Not sure / skip</option><option>Yes</option><option>No</option></select></label>
+      <label>Tell people about your place <textarea name="desc" rows="5"></textarea></label>
+      <p class="muted" id="err" role="alert"></p>
+      <button class="btn btn-primary" type="submit">Prepare my listing</button>
+    </form>
+  </article>
+</main>
+<div id="site-footer"></div>
+<script src="assets/app.js"></script>
+<script>
+document.getElementById("f").addEventListener("submit", function(e){
+  e.preventDefault();
+  var f = e.target, err = document.getElementById("err");
+  var missing = ["name","type","town","phone"].filter(function(n){ return !f.elements[n].value.trim(); });
+  if(missing.length){ err.textContent = "Please fill in: " + missing.join(", ") + "."; f.elements[missing[0]].focus(); return; }
+  err.textContent = "";
+  var offers = Array.prototype.filter.call(f.querySelectorAll('input[name=offer]:checked'), function(){ return true; }).map(function(i){ return i.value; });
+  var lines = [
+    "Business: " + f.elements.name.value, "Type: " + f.elements.type.value, "Offers: " + offers.join(", "),
+    "Address: " + f.elements.address.value + (f.elements.hide.checked ? " (hide on site)" : ""), "Town: " + f.elements.town.value,
+    "Hours: " + f.elements.hours.value, "Season: " + f.elements.season.value, "Phone: " + f.elements.phone.value,
+    "Email: " + f.elements.email.value, "Website: " + f.elements.website.value, "SNAP: " + f.elements.snap.value, "", f.elements.desc.value
+  ];
+  location.href = "mailto:info@guidestonecolorado.org?subject=" + encodeURIComponent("New listing: " + f.elements.name.value)
+    + "&body=" + encodeURIComponent(lines.join("\n"));
+});
+</script>
+</body>
+</html>

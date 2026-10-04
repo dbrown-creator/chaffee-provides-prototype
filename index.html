@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en" data-root=".">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chaffee Provides · Local food in Chaffee County, Colorado</title>
+<meta name="description" content="Find Chaffee County farms, ranches, farmers markets, restaurants and food assistance on one up-to-date map. A project of Guidestone Colorado.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-page="index.html">
+<div id="site-header"></div>
+<main id="main">
+  <section class="hero" style="background-image:url('https://chaffeeprovides.org/wp-content/uploads/2021/01/IMG_2883-scaled.jpg')">
+    <div class="wrap">
+      <h1>This land provides.</h1>
+      <p class="lede">Beef, eggs, garlic, greens, flowers and honey, grown in Chaffee County. Find the farms, ranches, markets and food programs near you.</p>
+      <form class="search-bar" action="find-food.html" role="search">
+        <label class="sr-only" for="hq">Search local food</label>
+        <input id="hq" name="q" type="search" placeholder="Try “eggs”, “beef” or “Buena Vista”">
+        <button class="btn btn-primary" type="submit">Find food</button>
+      </form>
+      <div class="notice"><strong>Need food now?</strong> Free meals, pantries and the 24/7 community fridge are listed by day on our <a href="food-assistance.html">food assistance page</a>. They're open to everyone, including anyone whose SNAP benefits are delayed.</div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head"><div><h2>What are you looking for?</h2><p>Browse by what you want to eat, or by the kind of place.</p></div>
+        <a class="btn btn-ghost" href="find-food.html">Open the full map →</a></div>
+      <div class="grid cols-4" id="offerTiles"></div>
+      <div class="grid cols-4" id="typeTiles" style="margin-top:16px"></div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:32px">
+      <div>
+        <h2>Coming up</h2>
+        <ul class="events" id="events"></ul>
+        <p class="muted" style="font-size:.88rem;margin-top:10px">Dates checked against each organizer's own website. <a href="food-assistance.html">Weekly food-assistance schedule →</a></p>
+      </div>
+      <div>
+        <h2>Open this month</h2>
+        <p class="muted" id="openIntro"></p>
+        <ul class="sources" id="openList" style="columns:2;column-gap:24px"></ul>
+        <a href="find-food.html?open=1">See them all on the map →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head"><div><h2>Spotlight: Land &amp; People</h2><p>Stories from the people who feed the valley.</p></div>
+        <a class="btn btn-ghost" href="spotlight/index.html">All stories →</a></div>
+      <div class="grid cols-3" id="posts"></div>
+    </div>
+  </section>
+
+  <section class="block alt">
+    <div class="wrap grid" style="grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px;align-items:center">
+      <div>
+        <h2>Grow, raise, cook or share food here?</h2>
+        <p>Farms, ranches, markets, restaurants and food-access groups can list for free. Tell us your hours and what you offer, and we'll check in each season to keep your listing current.</p>
+        <a class="btn btn-primary" href="list-your-business.html">List your business</a>
+      </div>
+      <div class="card"><div class="body">
+        <h3>Why it's up to date</h3>
+        <p class="muted" style="margin:0">Each listing combines Chaffee Provides with Colorado Proud, the Colorado Farmers Market Association and USDA directories, then is checked against the provider's own website. Every listing page shows its sources and when it was last checked.</p>
+      </div></div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/app.js"></script>
+<script>
+(function(){
+  "use strict";
+  var esc = CP.esc;
+  // Dated events, each confirmed on the organizer's own site (2026-10-03). Past ones drop off.
+  var EVENTS = [
+    { start:"2026-10-03", end:"2026-10-24", when:"Saturdays to Oct 24", title:"Salida Farmers Market", detail:"9 am – noon · Alpine Park, 404 E St", href:"provider.html?id=salida-farmers-market", recurring:true },
+    { start:"2026-11-14", end:"2026-12-19", when:"Sat, Nov 14 – Dec 19", title:"Chaffee County Winter Farmers Market", detail:"10 am – 1 pm · Chaffee County Fairgrounds", href:"https://foodshedalliance.com" },
+    { start:"2026-11-04", end:"2026-11-04", when:"Wed, Nov 4", title:"Food box drive-through", detail:"First Wednesday monthly · Salida Community Center, 305 F St", href:"food-assistance.html" },
+    { start:"2026-12-02", end:"2026-12-02", when:"Wed, Dec 2", title:"Food box drive-through", detail:"First Wednesday monthly · Salida Community Center, 305 F St", href:"food-assistance.html" }
+  ];
+  var today = new Date().toISOString().slice(0,10);
+  document.getElementById("events").innerHTML = EVENTS.filter(function(e){ return e.end >= today; }).slice(0,4).map(function(e){
+    return '<li><span class="when">'+esc(e.when)+'</span><span class="what"><strong><a href="'+esc(e.href)+'">'+esc(e.title)+'</a></strong><span>'+esc(e.detail)+'</span></span></li>';
+  }).join("") || '<li>No dated events right now. Check the <a href="find-food.html">map</a>.</li>';
+
+  function places(n){ return n + (n === 1 ? " place" : " places"); }
+  CP.load("providers").then(function(d){
+    var all = d.providers.filter(function(p){ return p.status !== "likely_closed"; }), meta = d.meta;
+    function count(field, key){ return all.filter(function(p){ return p[field].indexOf(key) !== -1; }).length; }
+    document.getElementById("offerTiles").innerHTML = Object.keys(meta.offerings).filter(function(k){ return count("offerings",k); }).map(function(k){
+      return '<a class="tile" href="find-food.html?offering='+k+'"><span class="emoji" aria-hidden="true">'+(CP.OFFERING_EMOJI[k]||"")+'</span><strong>'+esc(meta.offerings[k])+'</strong><span class="count">'+places(count("offerings",k))+'</span></a>';
+    }).join("");
+    document.getElementById("typeTiles").innerHTML = Object.keys(meta.types).filter(function(k){ return count("types",k); }).map(function(k){
+      var st = CP.typeStyle(k);
+      return '<a class="tile" href="find-food.html?type='+k+'" style="border-top:4px solid '+st.hex+'"><span class="emoji" aria-hidden="true">'+st.emoji+'</span><strong>'+esc(meta.types[k])+'</strong><span class="count">'+places(count("types",k))+'</span></a>';
+    }).join("");
+    var open = all.filter(CP.openThisMonth);
+    document.getElementById("openIntro").textContent = open.length + " places list " + CP.thisMonth() + " in their season. Many more sell year-round by appointment.";
+    document.getElementById("openList").innerHTML = open.slice(0,12).map(function(p){
+      return '<li><a href="'+CP.providerUrl(p)+'">'+esc(p.name)+'</a></li>';
+    }).join("");
+  });
+
+  CP.load("posts").then(function(d){
+    document.getElementById("posts").innerHTML = d.posts.slice(0,3).map(function(p){
+      return '<article class="card"><a class="post-card" href="spotlight/post.html?slug='+encodeURIComponent(p.slug)+'">'
+        + '<div class="img" role="img" aria-label="'+esc(p.alt)+'" style="background-image:url(\''+esc(p.image)+'\')"></div>'
+        + '<div class="body"><div class="meta">'+esc(CP.fmtDate(p.date))+(p.draft ? ' · <span class="badge-new">New</span>' : '')+'</div>'
+        + '<h3>'+esc(p.title)+'</h3><p class="muted" style="margin:0">'+esc(p.excerpt)+'</p></div></a></article>';
+    }).join("");
+  });
+})();
+</script>
+</body>
+</html>

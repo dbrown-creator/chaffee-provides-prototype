@@ -1,0 +1,136 @@
+/* Chaffee Provides draft — shared chrome, data loading and helpers. */
+(function(){
+  "use strict";
+  var ROOT = document.documentElement.getAttribute("data-root") || ".";
+
+  var TYPE_STYLE = {
+    farm:       { emoji:"🐄", color:"var(--t-farm)",       hex:"#2f6b3c" },
+    market:     { emoji:"🧺", color:"var(--t-market)",     hex:"#a8761d" },
+    assistance: { emoji:"🥫", color:"var(--t-assistance)", hex:"#a94f28" },
+    dining:     { emoji:"🍽️", color:"var(--t-dining)",     hex:"#5b6b8c" },
+    community:  { emoji:"🌱", color:"var(--t-community)",  hex:"#3f7f9c" }
+  };
+  var OFFERING_EMOJI = { "veggies":"🥕", "fruit":"🍎", "beef-meat":"🥩", "poultry-eggs":"🥚",
+    "dairy":"🧀", "flowers":"💐", "spices-garlic":"🧄", "staples":"🍯" };
+  var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+  var NAV = [
+    ["index.html","Home"], ["find-food.html","Find Food"], ["food-assistance.html","Food Assistance"],
+    ["spotlight/index.html","Spotlight"], ["list-your-business.html","List Your Business"], ["about.html","About"]
+  ];
+
+  function esc(s){
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
+      return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c];
+    });
+  }
+  function url(path){ return ROOT + "/" + path; }
+
+  function header(){
+    var here = document.body.getAttribute("data-page");
+    var links = NAV.map(function(n){
+      var cur = n[0] === here ? ' aria-current="page"' : "";
+      return '<a href="'+url(n[0])+'"'+cur+'>'+n[1]+'</a>';
+    }).join("");
+    return '<a class="skip" href="#main">Skip to content</a>'
+      + '<div class="draft" role="note"><strong>Prototype for review</strong> — a proposed redesign of ChaffeeProvides.org, prepared by Colorado Farm Trail for Guidestone Colorado. Not the official site: visit <a href="https://chaffeeprovides.org">chaffeeprovides.org</a>.</div>'
+      + '<header class="site-header"><div class="wrap">'
+      + '<a class="brand" href="'+url("index.html")+'"><span class="name">Chaffee Provides</span><span class="tag">This land provides</span></a>'
+      + '<button class="menu-btn" aria-expanded="false" aria-controls="sitenav">Menu</button>'
+      + '<nav class="nav" id="sitenav" aria-label="Main">'+links+'</nav>'
+      + '</div></header>';
+  }
+  function footer(){
+    return '<footer class="site-footer"><div class="wrap"><div class="cols">'
+      + '<div><a class="brand" href="'+url("index.html")+'"><span class="name">Chaffee Provides</span><span class="tag">This land provides</span></a>'
+      + '<p style="margin-top:14px">Connecting Chaffee County residents with the farms, ranches, markets and food programs that feed this valley. A project of '
+      + '<a href="https://guidestonecolorado.org/" rel="noopener">Guidestone Colorado</a> with '
+      + '<a href="https://envisionchaffeecounty.org/" rel="noopener">Envision Chaffee County</a>.</p></div>'
+      + '<div><h3 style="color:#fff;font-size:1rem">Explore</h3><ul>'
+      + NAV.map(function(n){ return '<li><a href="'+url(n[0])+'">'+n[1]+'</a></li>'; }).join("")
+      + '</ul></div>'
+      + '<div><h3 style="color:#fff;font-size:1rem">Contact</h3><ul>'
+      + '<li><a href="mailto:info@guidestonecolorado.org">info@guidestonecolorado.org</a></li>'
+      + '<li>c/o Guidestone Colorado<br>P.O. Box 1056, Salida, CO 81201</li>'
+      + '<li><a href="https://www.facebook.com/ChaffeeProvides" rel="noopener">Facebook</a></li>'
+      + '</ul></div></div>'
+      + '<p class="fine">Listings combine Chaffee Provides, Colorado Proud, the Colorado Farmers Market Association, USDA local-food directories and each provider\'s own website; '
+      + 'every detail page shows where its information came from and when it was last checked. Funded in part by the Chaffee County Community Foundation\'s Food Access Cohort and Chaffee Common Ground.</p>'
+      + '</div></footer>';
+  }
+
+  function mountChrome(){
+    var h = document.getElementById("site-header");
+    var f = document.getElementById("site-footer");
+    if(h) h.outerHTML = header();
+    if(f) f.outerHTML = footer();
+    var btn = document.querySelector(".menu-btn"), nav = document.getElementById("sitenav");
+    if(btn && nav) btn.addEventListener("click", function(){
+      var open = nav.classList.toggle("open");
+      btn.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  var cache = {};
+  function load(name){
+    if(!cache[name]){
+      cache[name] = fetch(url("data/"+name+".json")).then(function(r){
+        if(!r.ok) throw new Error(name+".json: HTTP "+r.status);
+        return r.json();
+      });
+    }
+    return cache[name];
+  }
+
+  function thisMonth(){ return MONTHS[new Date().getMonth()]; }
+  function openThisMonth(p){ return (p.monthsOpen || []).indexOf(thisMonth()) !== -1; }
+  function primaryType(p){ return (p.types && p.types[0]) || "community"; }
+  function typeStyle(t){ return TYPE_STYLE[t] || TYPE_STYLE.community; }
+  function pinIcon(t){
+    var st = typeStyle(t);
+    return L.divIcon({ className:"", iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-26],
+      html:'<div class="pin" style="background:'+st.hex+'"><span>'+st.emoji+'</span></div>' });
+  }
+  function basemap(map){
+    // CARTO Voyager (light) — same keyed CARTO account the Farm Trail map uses.
+    var KEY = "cb1_3vh9_1_2876c53a17aa6fd35517591d";
+    var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+    return L.tileLayer("https://basemaps.cartocdn.com/rastertiles/"+(dark?"dark_all":"voyager")+"/{z}/{x}/{y}{r}.png?key="+KEY, {
+      maxZoom:19,
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+  }
+  // Chaffee County boundary (US Census TIGERweb, GEOID 08015, simplified ~80 m).
+  // Draws the county line and softly dims everything outside it. Non-interactive so it
+  // never steals clicks from pins; added to a low pane so markers stay on top.
+  function countyOutline(map){
+    return load("chaffee-county").then(function(gj){
+      var ring = gj.features[0].geometry.coordinates[0].map(function(c){ return [c[1], c[0]]; });
+      if(!map.getPane("county")){ map.createPane("county"); map.getPane("county").style.zIndex = 350; }
+      var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      var world = [[-89.9,-179.9],[-89.9,179.9],[89.9,179.9],[89.9,-179.9]];
+      L.polygon([world, ring], { pane:"county", interactive:false, stroke:false,
+        fillColor: dark ? "#000" : "#1f2a1f", fillOpacity: dark ? .35 : .14 }).addTo(map);
+      var line = L.polygon(ring, { pane:"county", interactive:false, fill:false,
+        color: dark ? "#94c79e" : "#2f5d3a", weight:2.5, opacity:.9, dashArray:"6 5" }).addTo(map);
+      return line;
+    }).catch(function(){ return null; });  // the map still works without the outline
+  }
+  function fmtDate(iso){
+    if(!iso) return "";
+    var d = new Date(iso + "T12:00:00");
+    return d.toLocaleDateString("en-US", { year:"numeric", month:"long", day:"numeric" });
+  }
+  function directions(p){
+    if(p.lat != null) return "https://www.google.com/maps/dir/?api=1&destination="+p.lat+","+p.lng;
+    return "https://www.google.com/maps/search/?api=1&query="+encodeURIComponent([p.name, p.address, p.town, "CO"].filter(Boolean).join(", "));
+  }
+  function providerUrl(p){ return url("provider.html?id="+encodeURIComponent(p.id)); }
+
+  window.CP = { esc:esc, url:url, load:load, TYPE_STYLE:TYPE_STYLE, OFFERING_EMOJI:OFFERING_EMOJI, MONTHS:MONTHS,
+    thisMonth:thisMonth, openThisMonth:openThisMonth, primaryType:primaryType, typeStyle:typeStyle,
+    pinIcon:pinIcon, basemap:basemap, countyOutline:countyOutline, fmtDate:fmtDate, directions:directions, providerUrl:providerUrl };
+
+  if(document.readyState === "loading") document.addEventListener("DOMContentLoaded", mountChrome);
+  else mountChrome();
+})();

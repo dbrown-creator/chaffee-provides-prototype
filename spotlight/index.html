@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en" data-root="..">
+<head>
+<meta name="robots" content="noindex, nofollow">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Spotlight: Land &amp; People · Chaffee Provides</title>
+<meta name="description" content="Stories about Chaffee County's farms, ranches, markets and the people who feed the valley.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+</head>
+<body data-page="spotlight/index.html">
+<div id="site-header"></div>
+<main id="main">
+  <section class="block">
+    <div class="wrap">
+      <div class="section-head"><div><h1>Spotlight: Land &amp; People</h1>
+        <p>Stories from Chaffee County's farms, ranches and markets, and practical guides to eating local.</p></div></div>
+      <div class="grid cols-3" id="posts"></div>
+      <p class="muted" style="margin-top:28px;font-size:.9rem" id="note"></p>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="../assets/app.js"></script>
+<script>
+CP.load("posts").then(function(d){
+  var esc = CP.esc;
+  document.getElementById("posts").innerHTML = d.posts.map(function(p){
+    return '<article class="card"><a class="post-card" href="post.html?slug='+encodeURIComponent(p.slug)+'">'
+      + '<div class="img" role="img" aria-label="'+esc(p.alt)+'" style="background-image:url(\''+esc(p.image)+'\')"></div>'
+      + '<div class="body"><div class="meta">'+esc(CP.fmtDate(p.date))+(p.draft ? ' · <span class="badge-new">New · draft</span>' : '')+'</div>'
+      + '<h3>'+esc(p.title)+'</h3><p class="muted" style="margin:0">'+esc(p.excerpt)+'</p></div></a></article>';
+  }).join("");
+  document.getElementById("note").textContent = "Migration note: " + d.migration_note;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+{
+ "migration_note": "The nine 2021-2022 posts are carried over as title, date, image and a short summary that links to the original on chaffeeprovides.org. Full text should be imported from Guidestone's WordPress export (Tools > Export) with their permission, rather than scraped. The two 2026 posts are new drafts written for review.",
+ "posts": [
+  {
+   "slug": "fall-2026-local-food",
+   "title": "Fall in the valley: where to find local food this October",
+   "date": "2026-10-03",
+   "draft": true,
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/01/market_customers.jpeg",
+   "alt": "Shoppers browsing produce stalls at an outdoor farmers market",
+   "excerpt": "The Salida market runs through October 24, the winter market opens in November, and fall CSA and beef-share season is here. A quick guide to eating local as the season turns.",
+   "body": "<p>Frost is on the pumpkins, but Chaffee County's food season isn't over. Here's where to find local food in the weeks ahead. Everything below was checked against each farm's or market's own website on October 3, 2026.</p><h2>Markets</h2><ul><li><strong>Salida Farmers Market</strong> runs <strong>Saturdays 9 am to noon through October 24</strong> at Alpine Park (404 E Street). <span class=\"muted\">(Source: <a href=\"https://foodshedalliance.com\">Foodshed Alliance</a>)</span></li><li>When it closes, the <strong>Chaffee County Winter Farmers Market</strong> takes over: <strong>Saturdays 10 am to 1 pm, November 14 to December 19</strong>, at the Chaffee County Fairgrounds. <span class=\"muted\">(Source: Foodshed Alliance)</span></li><li>In Buena Vista, <strong>The Lettucehead Food Company</strong> stocks Colorado-grown food year-round: Monday to Saturday 9 to 6, Sunday 10 to 4, at 545 US Hwy 24 N. <span class=\"muted\">(Source: <a href=\"http://www.thelettucehead.com\">thelettucehead.com</a>)</span></li></ul><h2>Sign up now for later</h2><ul><li><a href=\"provider.html?id=rocky-mountain-garlic\">Rocky Mountain Garlic</a> has its <strong>2026 Fall CSA</strong> sign-up open, plus this year's garlic varieties in its online shop.</li><li><a href=\"provider.html?id=headwater-farms\">Headwater Farms</a>' 2026 full-season CSA sold out. Join its newsletter to hear when next season's sign-ups open.</li><li><a href=\"provider.html?id=mushroom-love-co\">Mushroom Love Co</a> offers a limited mushroom CSA, along with growing supplies and classes.</li></ul><h2>Stock the freezer</h2><p>Fall is when many ranches sell beef in bulk. <a href=\"provider.html?id=hutchinson-ranch\">Hutchinson Ranch</a> takes grass-fed beef orders by phone or email. Browse every ranch on the <a href=\"find-food.html?offering=beef-meat\">Beef &amp; Meat map</a>.</p><h2>Delivered from the San Luis Valley</h2><p><a href=\"provider.html?id=valley-roots-food-hub\">Valley Roots Food Hub</a> delivers produce, meat, cheese and eggs to Salida and Buena Vista. Orders are due Monday at 4 pm for Thursday delivery.</p><div class=\"callout\">Pumpkin season: Guidestone Colorado lists its 20th annual Pumpkin Patch &amp; Harvest Festival on <a href=\"https://www.guidestonecolorado.org/\">guidestonecolorado.org</a>. Check there for this year's dates and hours.</div><p>Know a farm stand or fall event we missed? <a href=\"list-your-business.html\">Add it to the directory</a>.</p>",
+   "sources": ["https://foodshedalliance.com", "http://www.thelettucehead.com", "http://rockymountaingarlic.net/", "https://www.headwaterfarmco.com/", "https://www.mushroomloveco.com/", "https://www.hutchranchsalida.com/beef", "https://www.valleyrootsfoodhub.com/", "https://www.guidestonecolorado.org/"]
+  },
+  {
+   "slug": "food-assistance-guide",
+   "title": "Every free meal and pantry in Chaffee County, in one place",
+   "date": "2026-10-02",
+   "draft": true,
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/01/sara-water-2-scaled.jpg",
+   "alt": "Rows of young vegetable plants being watered in a greenhouse",
+   "excerpt": "With SNAP benefits uncertain for many families, we turned the county's food-access flyer into a page you can search, filter by day and print, and re-checked each listing.",
+   "body": "<p>Last fall, a one-page flyer collected Chaffee County's free meals, pantries and food boxes. It was a great resource, but as an image it couldn't be searched, read aloud by a screen reader, or easily updated.</p><p>Our new <a href=\"food-assistance.html\">Food Assistance page</a> has the same information as a schedule you can filter by day, map and print. We also re-checked each listing against the organization's own website where one exists.</p><h2>What's open, at a glance</h2><ul><li><strong>Every day, 24/7:</strong> Guidestone Colorado's Free Community Fridge, behind A Church at 419 D St, Salida.</li><li><strong>Buena Vista:</strong> Ark Valley Christian Mission pantry, Tuesday, Wednesday and Friday 11 am to 2 pm, 122 Cottonwood Ave (confirmed on the mission's site).</li><li><strong>Salida:</strong> pantries at The Grainery, Caring &amp; Sharing and First Presbyterian Church most weekdays, and community meals Monday, Tuesday and Thursday. <a href=\"food-assistance.html\">See the full schedule.</a></li><li><strong>First Wednesday of each month:</strong> food box drive-through at the Salida Community Center, 305 F St.</li></ul><h2>What changed</h2><p>First Presbyterian's own website now lists its Thursday pantry as <strong>1 to 3:30 pm</strong>, not the 1 to 4 pm on last year's flyer. We couldn't reach the Caring &amp; Sharing or Grainery websites when we checked, so those times come from the flyer. Please call ahead.</p><h2>How you can help</h2><p>Pantries need money, volunteers and food, especially fresh produce and protein. The Chaffee County Community Foundation's <a href=\"https://www.chaffeecommunity.org/safetynet\">safety-net fund</a> is the easiest place to start. Growers: ask a pantry about taking your extras.</p>",
+   "sources": ["https://www.salidapresbyterian.org/", "https://chaffeeprovides.org/wp-content/uploads/2025/10/food-pdf.pdf", "https://www.chaffeecommunity.org/safetynet"]
+  },
+  {
+   "slug": "tis-the-season",
+   "title": "Tis the Season",
+   "date": "2022-08-23",
+   "original": "https://chaffeeprovides.org/tis-the-season/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/03/148427307_10160113828239796_1122539634703049704_n-770x900.jpg",
+   "alt": "Seasonal produce from a Chaffee County farm",
+   "excerpt": "Why eating with the seasons tastes better, nourishes more and keeps money in the valley, and practical ways to do it here."
+  },
+  {
+   "slug": "market-madness",
+   "title": "Market Madness",
+   "date": "2022-07-14",
+   "original": "https://chaffeeprovides.org/market-madness/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/01/market_customers.jpeg",
+   "alt": "Shoppers browsing produce stalls at an outdoor farmers market",
+   "excerpt": "A summer preview of the Salida and Buena Vista farmers markets, with a roundup of vendors from produce growers to bakers, and how SNAP and Double Up Food Bucks work at market."
+  },
+  {
+   "slug": "the-creative-gardener",
+   "title": "The Creative Gardener",
+   "date": "2022-06-06",
+   "original": "https://chaffeeprovides.org/the-creative-gardener/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2022/06/Unknown-2.jpeg",
+   "alt": "A raised garden bed built from reclaimed materials",
+   "excerpt": "Starting late or on a budget? Raised beds from pallets, old sinks and other salvage, plus where in the county to find materials."
+  },
+  {
+   "slug": "eat-away-at-climate-change",
+   "title": "Eat Away at Climate Change",
+   "date": "2022-05-10",
+   "original": "https://chaffeeprovides.org/eat-away-at-climate-change/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2022/04/babylettuces-scaled.jpg",
+   "alt": "Rows of baby lettuces growing in a field",
+   "excerpt": "Food miles matter, but supporting smaller, more sustainable farms over industrial monoculture matters more. An Earth Day follow-up."
+  },
+  {
+   "slug": "no-time-for-gardening",
+   "title": "No time for gardening? We've got your table covered!",
+   "date": "2021-03-05",
+   "original": "https://chaffeeprovides.org/no-time-for-gardening-weve-got-your-table-covered/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/03/CROP-CSA-FarmMkt-1600x900.jpeg",
+   "alt": "A farm-share box of fresh vegetables at a farmers market",
+   "excerpt": "CSAs and farm shares from local growers, and how the county's farmers markets accept SNAP and Double Up Food Bucks. Market details are from 2021; see Find Food for current times."
+  },
+  {
+   "slug": "water-project-kelly-ranch",
+   "title": "Water project improves scenery, crop production on historic ranch",
+   "date": "2021-03-03",
+   "original": "https://chaffeeprovides.org/water-project-improves-scenery-crop-production-on-historic-ranch/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/03/KellyRanch2.jpg",
+   "alt": "Hay meadows on the Kelly Ranch below Mount Princeton",
+   "excerpt": "On the historic Kelly Ranch below Mount Princeton, nearly a mile of buried irrigation pipe is raising hay yields and helping wetlands and wildlife."
+  },
+  {
+   "slug": "come-sit-at-our-virtual-table",
+   "title": "Come sit at our virtual table!",
+   "date": "2021-01-19",
+   "original": "https://chaffeeprovides.org/come-sit-at-our-virtual-table/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/01/market_customers.jpeg",
+   "alt": "Shoppers browsing produce stalls at an outdoor farmers market",
+   "excerpt": "The launch post: how Chaffee Provides grew out of pandemic supply-chain gaps to connect residents with local ranchers, farmers, markets and restaurants."
+  },
+  {
+   "slug": "its-time-for-starts",
+   "title": "It's time for Starts!",
+   "date": "2021-01-19",
+   "original": "https://chaffeeprovides.org/its-time-for-starts/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/01/sara-water-2-scaled.jpg",
+   "alt": "Seedlings being watered inside a geothermal greenhouse",
+   "excerpt": "A visit to a Chalk Creek greenhouse that uses hot-spring heat to start seedlings weeks before the last frost, with timing tips for home gardeners."
+  },
+  {
+   "slug": "ranchers-choose-life-on-the-land",
+   "title": "Amid change and pressures, ranchers choose life on the land",
+   "date": "2021-01-19",
+   "original": "https://chaffeeprovides.org/amid-change-and-pressures-ranchers-choose-life-on-the-land/",
+   "image": "https://chaffeeprovides.org/wp-content/uploads/2021/01/ken-haying-web-copy.jpg",
+   "alt": "A rancher haying a field in Chaffee County",
+   "excerpt": "A fifth-generation rancher on the satisfaction of the work and the friction that comes with a growing valley."
+  }
+ ]
+}

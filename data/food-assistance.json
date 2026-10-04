@@ -1,0 +1,19 @@
+{
+ "updated": "2026-10-03",
+ "note": "Compiled from the Chaffee County Food Access flyer (Oct 2025) and re-checked against each organization's own website on 2026-10-03 where one exists. Times change - call ahead when you can.",
+ "services": [
+  {"kind": "meal", "town": "Salida", "days": ["Mon"], "time": "12:00 pm", "what": "Community meal", "where": "First Presbyterian Church", "address": "7 Poncha Blvd", "provider": "salida-first-presbyterian-church", "source": "Food access flyer, Oct 2025", "check": "Not listed on the church's current website - confirm before going."},
+  {"kind": "meal", "town": "Salida", "days": ["Tue", "Thu"], "time": "11:00 am - 1:00 pm", "what": "Community meals", "where": "Caring & Sharing", "address": "220 W 4th St", "provider": "caring-sharing-sanctuary-soup-kitchen", "source": "Food access flyer, Oct 2025", "check": "Their website was down for maintenance on Oct 3, 2026."},
+  {"kind": "pantry", "town": "Salida", "days": ["Mon", "Fri"], "time": "10:00 am - 3:30 pm", "what": "Food pantry", "where": "The Grainery", "address": "1348 E St", "provider": "the-grainery-ministries", "source": "Food access flyer, Oct 2025", "check": "Their website had a security error on Oct 3, 2026."},
+  {"kind": "pantry", "town": "Salida", "days": ["Tue", "Thu"], "time": "11:00 am - 2:00 pm", "what": "Food pantry", "where": "Caring & Sharing", "address": "220 W 4th St", "provider": "caring-sharing-sanctuary-soup-kitchen", "source": "Food access flyer, Oct 2025"},
+  {"kind": "pantry", "town": "Salida", "days": ["Thu"], "time": "1:00 pm - 3:30 pm", "what": "Food pantry (non-perishables)", "where": "First Presbyterian Church", "address": "7 Poncha Blvd", "provider": "salida-first-presbyterian-church", "source": "Church website, checked Oct 3, 2026 (the 2025 flyer said 1-4 pm)", "verified": true},
+  {"kind": "fridge", "town": "Salida", "days": ["Daily"], "time": "Open 24/7", "what": "Free community fridge, take what you need", "where": "Guidestone Colorado's Free Community Fridge", "address": "419 D St (behind A Church)", "provider": "guidestone-colorado-s-free-community-fridge", "source": "Food access flyer, Oct 2025"},
+  {"kind": "box", "town": "Salida", "days": ["1st Wed"], "time": "First come, first served", "what": "Food box drive-through (first Wednesday of each month)", "where": "Salida Community Center", "address": "305 F St", "source": "Food access flyer, Oct 2025"},
+  {"kind": "pantry", "town": "Salida", "days": ["Tue", "Wed", "Thu", "Fri"], "time": "10:00 am - 4:00 pm, by appointment", "what": "2SLGBTQIA+ friendly pantry", "where": "Partnership for Community Action (PfCA)", "address": "203 E St", "provider": "pifca-partnership-for-community-action", "source": "Food access flyer, Oct 2025", "check": "PfCA's website lists office hours Mon-Fri 10-4; call to book."},
+  {"kind": "pantry", "town": "Buena Vista", "days": ["Tue", "Wed", "Fri"], "time": "11:00 am - 2:00 pm", "what": "Food pantry", "where": "Ark Valley Christian Mission", "address": "122 Cottonwood Ave", "provider": "arkansas-valley-christian-mission", "source": "Mission website, checked Oct 3, 2026", "verified": true}
+ ],
+ "help": [
+  {"label": "Give, volunteer or donate food", "url": "https://www.chaffeecommunity.org/safetynet", "by": "Chaffee County Community Foundation"},
+  {"label": "Other local services (housing, health, childcare)", "url": "https://chaffeeresources.com", "by": "ChaffeeResources.com"}
+ ]
+}
