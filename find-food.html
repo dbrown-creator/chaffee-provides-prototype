@@ -172,9 +172,10 @@ if (new URLSearchParams(location.search).get("embed") === "1") document.document
     els.list.innerHTML = html || '<p style="padding:16px" class="muted">Nothing matches those filters. <button class="chip" id="reset2">Clear filters</button></p>';
     var r2 = document.getElementById("reset2"); if(r2) r2.addEventListener("click", reset);
     var bounds = [];
+    var offs = CP.fanOut(shown.filter(function(p){ return p.lat != null; }));
     shown.forEach(function(p){
       if(p.lat == null) return;
-      var icon = CP.pinIcon(state.type && p.types.indexOf(state.type) !== -1 ? state.type : CP.primaryType(p));
+      var icon = CP.pinIcon(state.type && p.types.indexOf(state.type) !== -1 ? state.type : CP.primaryType(p), offs[p.id]);
       var m = L.marker([p.lat, p.lng], { icon:icon, title:p.name }).bindPopup(popup(p), { maxWidth:280 });
       m.on("mouseover", function(){ hl(p.id, true); }); m.on("mouseout", function(){ hl(p.id, false); });
       m.addTo(layer); p._m = m; bounds.push([p.lat, p.lng]);

@@ -86,9 +86,10 @@
   function openThisMonth(p){ return (p.monthsOpen || []).indexOf(thisMonth()) !== -1; }
   function primaryType(p){ return (p.types && p.types[0]) || "community"; }
   function typeStyle(t){ return TYPE_STYLE[t] || TYPE_STYLE.community; }
-  function pinIcon(t){
-    var st = typeStyle(t);
-    return L.divIcon({ className:"", iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-26],
+  // off = [dx, dy] pixel nudge for places that share one spot (see fanOut).
+  function pinIcon(t, off){
+    var st = typeStyle(t), dx = off ? off[0] : 0, dy = off ? off[1] : 0;
+    return L.divIcon({ className:"", iconSize:[28,28], iconAnchor:[14-dx,28-dy], popupAnchor:[dx,dy-26],
       html:'<div class="pin" style="background:'+st.hex+'"><span>'+st.emoji+'</span></div>' });
   }
   // Basemaps. Default: OpenStreetMap's standard map (the reviewer's pick), in light and dark
@@ -111,6 +112,27 @@
   // Chaffee County boundary (US Census TIGERweb, GEOID 08015, simplified ~80 m).
   // Draws the county line and softly dims everything outside it. Non-interactive so it
   // never steals clicks from pins; added to a low pane so markers stay on top.
+  // Places within ~30 m of each other (two organizations at one address) would stack
+  // and hide each other; give each a pixel offset in a small ring. Returns id -> [dx, dy].
+  function fanOut(list){
+    var groups = [], out = {}, NEAR = 30;
+    list.forEach(function(p){
+      var g = null;
+      for(var j = 0; j < groups.length && !g; j++){
+        var a = groups[j][0], dy = (p.lat - a.lat) * 111320, dx = (p.lng - a.lng) * 111320 * Math.cos(a.lat * Math.PI / 180);
+        if(dx*dx + dy*dy <= NEAR*NEAR) g = groups[j];
+      }
+      if(g) g.push(p); else groups.push([p]);
+    });
+    groups.forEach(function(g){
+      if(g.length < 2) return;
+      g.forEach(function(p, i){
+        var a = 2*Math.PI*i/g.length - Math.PI/2, r = 13 + 2*g.length;
+        out[p.id] = [Math.round(r*Math.cos(a)), Math.round(r*Math.sin(a))];
+      });
+    });
+    return out;
+  }
   function countyOutline(map){
     return load("chaffee-county").then(function(gj){
       var ring = gj.features[0].geometry.coordinates[0].map(function(c){ return [c[1], c[0]]; });
@@ -136,7 +158,7 @@
   function providerUrl(p){ return url("provider.html?id="+encodeURIComponent(p.id)); }
 
   window.CP = { esc:esc, url:url, load:load, TYPE_STYLE:TYPE_STYLE, OFFERING_EMOJI:OFFERING_EMOJI, MONTHS:MONTHS,
-    thisMonth:thisMonth, openThisMonth:openThisMonth, primaryType:primaryType, typeStyle:typeStyle,
+    fanOut:fanOut, thisMonth:thisMonth, openThisMonth:openThisMonth, primaryType:primaryType, typeStyle:typeStyle,
     pinIcon:pinIcon, basemap:basemap, countyOutline:countyOutline, fmtDate:fmtDate, directions:directions, providerUrl:providerUrl };
 
   // Real height of the banner + header, so full-height layouts (the Find Food map) fit

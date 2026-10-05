@@ -1,7 +1,7 @@
 {
  "meta": {
   "generated": "2026-10-05",
-  "count": 44,
+  "count": 46,
   "types": {
    "farm": "Farms & Ranches",
    "market": "Markets & Shops",
@@ -387,10 +387,10 @@
    "categories": [
     "Food Bank"
    ],
-   "address": "220 W 4th St Salida",
+   "address": "220 W 4th St",
    "city": "",
    "county": "Chaffee",
-   "zip": "81201",
+   "zip": "",
    "phone": "(719) 539-3686",
    "callFirst": false,
    "website": "",
@@ -399,7 +399,7 @@
    "instagram": "",
    "hours": "",
    "monthsOpen": [],
-   "products": "Beef/Meat, Dairy, Veggies, Staples",
+   "products": "",
    "organic": false,
    "snap": false,
    "ada": false,
@@ -414,11 +414,9 @@
     "Phone": "chaffee_provides",
     "Email": "chaffee_provides",
     "Notes": "chaffee_provides",
-    "Address": "chaffee_provides",
-    "Zip": "chaffee_provides",
+    "County": "census-geocoder",
     "Website": "override",
-    "Products": "chaffee_provides",
-    "County": "census-geocoder"
+    "Address": "override"
    },
    "geoSource": "source",
    "status": "unknown",
@@ -432,12 +430,7 @@
    "types": [
     "assistance"
    ],
-   "offerings": [
-    "veggies",
-    "beef-meat",
-    "dairy",
-    "staples"
-   ]
+   "offerings": []
   },
   {
    "name": "Chaffee Cares",
@@ -488,6 +481,62 @@
     "community"
    ],
    "offerings": [
+    "staples"
+   ]
+  },
+  {
+   "name": "Chaffee Community Resource Center",
+   "categories": [
+    "Food Bank"
+   ],
+   "address": "220 W 4th St Salida",
+   "city": "",
+   "county": "Chaffee",
+   "zip": "81201",
+   "phone": "(719) 539-4849",
+   "callFirst": false,
+   "website": "http://salidacaringsharing.org/the-resource-center/",
+   "email": "info@salidacaringsharing.org",
+   "facebook": "",
+   "instagram": "",
+   "hours": "",
+   "monthsOpen": [],
+   "products": "Beef/Meat, Dairy, Veggies, Staples",
+   "organic": false,
+   "snap": false,
+   "ada": false,
+   "notes": "Thanks to generous donations from Safeway and other local businesses, we have a limited supply of food available on a daily basis. This is generally given out as needed, on a first-come-first-served basis. We also have some food held in reserve to help out families in emergency situations. Hours are from 10:00 am – 1:00 pm Monday to Friday.",
+   "lat": 38.5348233,
+   "lng": -105.995465,
+   "sources": [
+    "chaffee_provides"
+   ],
+   "provenance": {
+    "Business Name": "chaffee_provides",
+    "Address": "chaffee_provides",
+    "Zip": "chaffee_provides",
+    "Phone": "chaffee_provides",
+    "Email": "chaffee_provides",
+    "Website": "chaffee_provides",
+    "Products": "chaffee_provides",
+    "Notes": "chaffee_provides",
+    "County": "census-geocoder"
+   },
+   "geoSource": "source",
+   "status": "unverified",
+   "verified": "",
+   "id": "chaffee-community-resource-center",
+   "town": "Chaffee County",
+   "sourceLabels": [
+    "Chaffee Provides"
+   ],
+   "types": [
+    "assistance"
+   ],
+   "offerings": [
+    "veggies",
+    "beef-meat",
+    "dairy",
     "staples"
    ]
   },
@@ -879,6 +928,57 @@
    "offerings": [
     "beef-meat"
    ]
+  },
+  {
+   "name": "Foodshed Alliance",
+   "categories": [
+    "Organization"
+   ],
+   "address": "Alpine Park",
+   "city": "Salida",
+   "county": "Chaffee",
+   "zip": "81201",
+   "phone": "(719) 398-0301",
+   "callFirst": false,
+   "website": "https://www.foodshedalliance.com",
+   "email": "info@foodshedalliance.com",
+   "facebook": "",
+   "instagram": "",
+   "hours": "",
+   "monthsOpen": [],
+   "products": "",
+   "organic": false,
+   "snap": false,
+   "ada": false,
+   "notes": "Foodshed Alliance facilitates a thriving local food economy by organizing and promoting Farmers Markets and Vendors. We manage the Farmers Markets in Buena Vista and Salida, Colorado and host ShedFest, a hyper-local, end-of-the-season celebration of the region’s talents and bounty.",
+   "lat": 38.5331419,
+   "lng": -105.9940419,
+   "sources": [
+    "chaffee_provides"
+   ],
+   "provenance": {
+    "Business Name": "chaffee_provides",
+    "Address": "chaffee_provides",
+    "Phone": "chaffee_provides",
+    "Email": "chaffee_provides",
+    "Website": "chaffee_provides",
+    "Notes": "chaffee_provides",
+    "City": "chaffee_provides",
+    "Zip": "chaffee_provides",
+    "County": "census-geocoder"
+   },
+   "geoSource": "source",
+   "status": "unverified",
+   "verified": "",
+   "id": "foodshed-alliance",
+   "town": "Salida",
+   "sourceLabels": [
+    "Chaffee Provides"
+   ],
+   "types": [
+    "community"
+   ],
+   "offerings": []
   },
   {
    "name": "Guidestone Colorado",
@@ -1826,8 +1926,7 @@
     "colorado_proud",
     "colorado_proud_farm_fresh",
     "cfma",
-    "usda",
-    "chaffee_provides"
+    "usda"
    ],
    "provenance": {
     "Address": "official-site:https://foodshedalliance.com",
@@ -1855,8 +1954,7 @@
     "Provider's own website",
     "Colorado Proud",
     "Colorado Farmers Market Association",
-    "USDA Local Food Directories",
-    "Chaffee Provides"
+    "USDA Local Food Directories"
    ],
    "types": [
     "market"
