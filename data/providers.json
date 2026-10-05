@@ -61,8 +61,7 @@
    "lng": -106.1330412,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "official-site:https://www.avcmbv.org/",
@@ -81,8 +80,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "assistance"
@@ -115,8 +113,7 @@
    "lng": -106.0742298,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Phone": "official-site:https://www.arrowpointcattle.com/contact",
@@ -136,8 +133,7 @@
    "town": "Nathrop",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -228,8 +224,7 @@
    "lat": 38.536236604798,
    "lng": -105.99158301805,
    "sources": [
-    "curated",
-    "colorado_proud_farm_fresh"
+    "curated"
    ],
    "provenance": {
     "Business Name": "curated",
@@ -248,8 +243,7 @@
    "id": "banyan-breads",
    "town": "Salida",
    "sourceLabels": [
-    "Farmers market vendor lists, checked by hand",
-    "Colorado Proud"
+    "Farmers market vendor lists, checked by hand"
    ],
    "types": [
     "market"
@@ -285,8 +279,7 @@
    "lng": -106.1626311,
    "sources": [
     "curated",
-    "colorado_proud_finder",
-    "colorado_proud_farm_fresh"
+    "colorado_proud_finder"
    ],
    "provenance": {
     "Business Name": "curated",
@@ -313,8 +306,7 @@
     "Colorado Proud"
    ],
    "types": [
-    "farm",
-    "community"
+    "farm"
    ],
    "offerings": [
     "veggies",
@@ -355,8 +347,7 @@
    "lng": -106.141712220022,
    "sources": [
     "official-site",
-    "usda",
-    "colorado_proud_farm_fresh"
+    "usda"
    ],
    "provenance": {
     "Address": "override",
@@ -381,8 +372,7 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "USDA Local Food Directories",
-    "Colorado Proud"
+    "USDA Local Food Directories"
    ],
    "types": [
     "market"
@@ -418,8 +408,7 @@
    "lng": -105.9953842,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Phone": "chaffee_provides",
@@ -438,8 +427,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "assistance"
@@ -477,8 +465,7 @@
    "lng": -105.9916776,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Phone": "chaffee_provides",
@@ -495,8 +482,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "community"
@@ -531,8 +517,7 @@
    "lng": -106.0198285,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "override",
@@ -553,8 +538,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -645,8 +629,7 @@
    "lng": -105.9923509,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Facebook": "official-site:https://www.facebook.com/copperkettleapothecary/",
@@ -666,8 +649,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -702,8 +684,7 @@
    "lng": -106.1673061,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Facebook": "official-site:https://cottonwoodspiritranch.com",
@@ -721,8 +702,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -761,8 +741,7 @@
    "lng": -106.1195484,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "official-site:https://eddylinebrewery.com/pages/restaurant-menu-board",
@@ -784,8 +763,7 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "dining"
@@ -821,8 +799,7 @@
    "lat": 38.534553,
    "lng": -106.050589,
    "sources": [
-    "colorado_proud_finder",
-    "colorado_proud_farm_fresh"
+    "colorado_proud_finder"
    ],
    "provenance": {
     "Business Name": "colorado_proud_finder",
@@ -877,8 +854,7 @@
    "lng": -106.046544,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Facebook": "official-site:https://www.facebook.com/everettranchbeef/",
@@ -895,8 +871,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1013,8 +988,7 @@
    "lng": -105.9921041,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Email": "chaffee_provides",
@@ -1029,8 +1003,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "community"
@@ -1063,8 +1036,7 @@
    "lng": -106.1311288,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Phone": "official-site:https://www.headwaterfarmco.com/contactus",
@@ -1082,8 +1054,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1119,8 +1090,7 @@
    "lng": -106.0435714,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "official-site:https://www.hutchranchsalida.com/beef",
@@ -1143,8 +1113,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1179,8 +1148,7 @@
    "lng": -106.117607,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "chaffee_provides",
@@ -1199,8 +1167,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1234,8 +1201,7 @@
    "lat": 38.536706125788,
    "lng": -105.991271193061,
    "sources": [
-    "curated",
-    "colorado_proud_farm_fresh"
+    "curated"
    ],
    "provenance": {
     "Business Name": "curated",
@@ -1253,8 +1219,7 @@
    "id": "market-on-main-st-the-triangle-oasis",
    "town": "Salida",
    "sourceLabels": [
-    "Farmers market vendor lists, checked by hand",
-    "Colorado Proud"
+    "Farmers market vendor lists, checked by hand"
    ],
    "types": [
     "market"
@@ -1290,8 +1255,7 @@
    "lng": -106.1554058,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Facebook": "official-site:https://www.facebook.com/meadowsedgefarmbv/",
@@ -1311,8 +1275,7 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1347,8 +1310,7 @@
    "lat": 38.5240098,
    "lng": -105.9986479,
    "sources": [
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Business Name": "chaffee_provides",
@@ -1366,8 +1328,7 @@
    "id": "moonstone-farm",
    "town": "Salida",
    "sourceLabels": [
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1405,8 +1366,7 @@
    "lng": -106.0830097,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Phone": "official-site:https://mountaingoatlodge.com",
@@ -1425,8 +1385,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1461,8 +1420,7 @@
    "lng": -106.1617464,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Facebook": "official-site:https://www.mushroomloveco.com/",
@@ -1480,8 +1438,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1516,8 +1473,7 @@
    "lng": -106.0425447,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Instagram": "official-site:https://www.instagram.com/phytologyflowers/",
@@ -1536,8 +1492,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1573,8 +1528,7 @@
    "lng": -105.991406,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Phone": "official-site:https://www.gopfca.com/",
@@ -1591,8 +1545,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "assistance"
@@ -1625,8 +1578,7 @@
    "lng": -106.0768953,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Phone": "official-site:https://ponchacreekgardens.wordpress.com/",
@@ -1646,8 +1598,7 @@
    "town": "Poncha Springs",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1759,8 +1710,7 @@
    "lng": -106.0619781,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Products": "official-site:http://www.salidacattlecompany.com",
@@ -1777,8 +1727,7 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1813,8 +1762,7 @@
    "lat": 38.5343414,
    "lng": -105.9933303,
    "sources": [
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Business Name": "chaffee_provides",
@@ -1834,8 +1782,7 @@
    "id": "salida-community-center",
    "town": "Salida",
    "sourceLabels": [
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "assistance"
@@ -1951,8 +1898,7 @@
    "lng": -105.9964061,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "official-site:https://www.salidapresbyterian.org/ministries/serving-our-community/",
@@ -1972,8 +1918,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "assistance"
@@ -2010,8 +1955,7 @@
    "lng": -106.0086696,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "official-site:http://www.scangameat.com/",
@@ -2031,8 +1975,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -2123,8 +2066,7 @@
    "lng": -106.0430725,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "chaffee_provides",
@@ -2142,8 +2084,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -2180,8 +2121,7 @@
    "lat": 38.8422178,
    "lng": -106.1311288,
    "sources": [
-    "colorado_proud_finder",
-    "colorado_proud_farm_fresh"
+    "colorado_proud_finder"
    ],
    "provenance": {
     "Business Name": "colorado_proud_finder",
@@ -2234,8 +2174,7 @@
    "lng": -106.129602,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Instagram": "official-site:https://www.theasianpalate.com",
@@ -2256,8 +2195,7 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "dining"
@@ -2292,8 +2230,7 @@
    "lng": -106.001502,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "chaffee_provides",
@@ -2312,8 +2249,7 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "assistance"
@@ -2346,8 +2282,7 @@
    "lng": -106.1350754,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "official-site:http://www.thelettucehead.com",
@@ -2368,8 +2303,7 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "market"
@@ -2410,8 +2344,7 @@
    "lat": 38.561560417431,
    "lng": -106.036496197503,
    "sources": [
-    "curated",
-    "colorado_proud_farm_fresh"
+    "curated"
    ],
    "provenance": {
     "Business Name": "curated",
@@ -2432,8 +2365,7 @@
    "id": "the-triangle-oasis",
    "town": "Salida",
    "sourceLabels": [
-    "Farmers market vendor lists, checked by hand",
-    "Colorado Proud"
+    "Farmers market vendor lists, checked by hand"
    ],
    "types": [
     "farm"
@@ -2471,8 +2403,7 @@
    "lng": -106.0948979,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "official-site:https://www.troutcreekfarm.com",
@@ -2491,8 +2422,7 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -2583,8 +2513,7 @@
    "lat": 38.5174706,
    "lng": -106.0760658,
    "sources": [
-    "colorado_proud_finder",
-    "colorado_proud_farm_fresh"
+    "colorado_proud_finder"
    ],
    "provenance": {
     "Business Name": "colorado_proud_finder",
@@ -2608,8 +2537,8 @@
     "Colorado Proud"
    ],
    "types": [
-    "market",
-    "community"
+    "farm",
+    "market"
    ],
    "offerings": [
     "veggies",

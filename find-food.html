@@ -24,7 +24,7 @@ if (new URLSearchParams(location.search).get("embed") === "1") document.document
       <h1 style="font-size:1.6rem;margin:0">Find local food</h1>
       <label class="sr-only" for="q">Search</label>
       <input type="search" id="q" placeholder="Search a farm, product or town…" autocomplete="off">
-      <div class="chips" id="types" role="group" aria-label="Provider type"></div>
+      <div class="chips" id="types" hidden role="group" aria-label="Provider type"></div>
       <div class="chips" id="offerings" role="group" aria-label="Product"></div>
       <div class="row">
         <label for="town" class="sr-only">Town</label>
@@ -215,10 +215,7 @@ if (new URLSearchParams(location.search).get("embed") === "1") document.document
   Promise.all([CP.load("providers"), countyReady]).then(function(r){
     var d = r[0];
     ALL = d.providers; META = d.meta;
-    Object.keys(META.types).forEach(function(k){
-      if(ALL.some(function(p){ return p.types.indexOf(k) !== -1; }))
-        els.types.appendChild(chip("type", k, META.types[k], CP.typeStyle(k).hex));
-    });
+    // Place types filter from the map key (addLegend), not a second row of chips here.
     Object.keys(META.offerings).forEach(function(k){
       if(ALL.some(function(p){ return p.offerings.indexOf(k) !== -1; }))
         els.offerings.appendChild(chip("offering", k, META.offerings[k]));
