@@ -1,7 +1,7 @@
 # Chaffee Provides — redesign draft
 
 A proposed rebuild of [ChaffeeProvides.org](https://chaffeeprovides.org) (Guidestone
-Colorado's local-food directory for Chaffee County). **Prototype for review, hosted on GitHub Pages. Not the official site.**
+Colorado's local-food directory for Chaffee County). **Prototype for review, hosted on GitHub Pages. Not the official site.** Only the map page (`find-food.html`) and provider detail pages are published; the root redirects to the map.
 Every page carries a "Draft for review" banner.
 
 The current-site inventory this draft was built from is `docs/CHAFFEE_SITE_INVENTORY.md`

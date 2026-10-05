@@ -14,10 +14,8 @@
     "dairy":"🧀", "flowers":"💐", "spices-garlic":"🧄", "staples":"🍯" };
   var MONTHS = ["January","February","March","April","May","June","July","August","September","October","November","December"];
 
-  var NAV = [
-    ["index.html","Home"], ["find-food.html","Find Food"], ["food-assistance.html","Food Assistance"],
-    ["spotlight/index.html","Spotlight"], ["list-your-business.html","List Your Business"], ["about.html","About"]
-  ];
+  // Review copy: only the map page and provider detail pages are published.
+  var NAV = [["find-food.html","Find Food"]];
 
   function esc(s){
     return String(s == null ? "" : s).replace(/[&<>"']/g, function(c){
@@ -35,27 +33,23 @@
     return '<a class="skip" href="#main">Skip to content</a>'
       + '<div class="draft" role="note"><strong>Prototype for review</strong> — a proposed redesign of ChaffeeProvides.org, prepared by Colorado Farm Trail for Guidestone Colorado. Not the official site: visit <a href="https://chaffeeprovides.org">chaffeeprovides.org</a>.</div>'
       + '<header class="site-header"><div class="wrap">'
-      + '<a class="brand" href="'+url("index.html")+'"><span class="name">Chaffee Provides</span></a>'
-      + '<button class="menu-btn" aria-expanded="false" aria-controls="sitenav">Menu</button>'
+      + '<a class="brand" href="'+url("find-food.html")+'"><span class="name">Chaffee Provides</span></a>'
       + '<nav class="nav" id="sitenav" aria-label="Main">'+links+'</nav>'
       + '</div></header>';
   }
   function footer(){
     return '<footer class="site-footer"><div class="wrap"><div class="cols">'
-      + '<div><a class="brand" href="'+url("index.html")+'"><span class="name">Chaffee Provides</span><span class="tag">This land provides</span></a>'
+      + '<div><a class="brand" href="'+url("find-food.html")+'"><span class="name">Chaffee Provides</span><span class="tag">This land provides</span></a>'
       + '<p style="margin-top:14px">Connecting Chaffee County residents with the farms, ranches, markets and food programs that feed this valley. A project of '
       + '<a href="https://guidestonecolorado.org/" rel="noopener">Guidestone Colorado</a> with '
       + '<a href="https://envisionchaffeecounty.org/" rel="noopener">Envision Chaffee County</a>.</p></div>'
-      + '<div><h3 style="color:#fff;font-size:1rem">Explore</h3><ul>'
-      + NAV.map(function(n){ return '<li><a href="'+url(n[0])+'">'+n[1]+'</a></li>'; }).join("")
-      + '</ul></div>'
       + '<div><h3 style="color:#fff;font-size:1rem">Contact</h3><ul>'
       + '<li><a href="mailto:info@guidestonecolorado.org">info@guidestonecolorado.org</a></li>'
       + '<li>c/o Guidestone Colorado<br>P.O. Box 1056, Salida, CO 81201</li>'
       + '<li><a href="https://www.facebook.com/ChaffeeProvides" rel="noopener">Facebook</a></li>'
       + '</ul></div></div>'
       + '<p class="fine">Listings combine Chaffee Provides, Colorado Proud, the Colorado Farmers Market Association, USDA local-food directories and each provider\'s own website; '
-      + 'every detail page shows where its information came from and when it was last checked. Funded in part by the Chaffee County Community Foundation\'s Food Access Cohort and Chaffee Common Ground.</p>'
+      + 'each listing page shows its sources and when it was last checked. Funded in part by the Chaffee County Community Foundation\'s Food Access Cohort and Chaffee Common Ground.</p>'
       + '</div></footer>';
   }
 
