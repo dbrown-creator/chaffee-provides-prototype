@@ -88,8 +88,8 @@
   function typeStyle(t){ return TYPE_STYLE[t] || TYPE_STYLE.community; }
   function pinIcon(t){
     var st = typeStyle(t);
-    return L.divIcon({ className:"", iconSize:[22,22], iconAnchor:[11,22], popupAnchor:[0,-20],
-      html:'<div class="pin" style="background:'+st.hex+'"></div>' });
+    return L.divIcon({ className:"", iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-26],
+      html:'<div class="pin" style="background:'+st.hex+'"><span>'+st.emoji+'</span></div>' });
   }
   // Basemaps. Default: OpenStreetMap's standard map (the reviewer's pick), in light and dark
   // mode alike. ?basemap=streets (Esri World Street Map) or ?basemap=voyager (CARTO, the

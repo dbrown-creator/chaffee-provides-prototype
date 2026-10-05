@@ -97,7 +97,7 @@ if (new URLSearchParams(location.search).get("embed") === "1") document.document
       div.innerHTML = '<div class="map-legend-title">Map key</div>' + Object.keys(META.types).filter(function(k){
         return ALL.some(function(p){ return p.types.indexOf(k) !== -1; });
       }).map(function(k){
-        return '<button type="button" data-key="'+k+'"><span class="pin-swatch" style="background:'+CP.typeStyle(k).hex+'"></span>'+esc(META.types[k])+'</button>';
+        return '<button type="button" data-key="'+k+'"><span class="pin-swatch" style="background:'+CP.typeStyle(k).hex+'"><span aria-hidden="true">'+CP.typeStyle(k).emoji+'</span></span>'+esc(META.types[k])+'</button>';
       }).join("");
       L.DomEvent.disableClickPropagation(div);
       div.querySelectorAll("button").forEach(function(b){
