@@ -1,18 +1,18 @@
 <!doctype html>
 <html lang="en" data-root=".">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Food Assistance in Chaffee County · Chaffee Provides</title>
 <meta name="description" content="Free meals, food pantries, the community fridge and food boxes in Salida and Buena Vista — by day, with addresses and times.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;1,200&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="assets/site.css">
 <style>
   .day-tabs{ display:flex; gap:6px; flex-wrap:wrap; margin:14px 0 18px; }
-  .svc-kind{ font-size:.75rem; font-weight:800; text-transform:uppercase; letter-spacing:.05em; color:var(--t-assistance); }
+  .svc-kind{ font-size:.75rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; color:var(--t-assistance); }
   .today-row td{ background:color-mix(in srgb, var(--wheat) 10%, transparent); }
   .check{ display:block; font-size:.82rem; color:var(--wheat); margin-top:3px; }
   .srcline{ display:block; font-size:.78rem; color:var(--muted); margin-top:3px; }
@@ -34,7 +34,7 @@
   <section class="block alt" style="padding-top:28px">
     <div class="wrap">
       <div class="section-head"><h2 style="margin:0">Schedule</h2>
-        <button class="btn btn-ghost no-print" onclick="window.print()">🖨️ Print this schedule</button></div>
+        <button class="btn btn-ghost no-print" onclick="window.print()">Print this schedule</button></div>
       <div class="day-tabs" id="days" role="group" aria-label="Filter by day"></div>
       <div class="table-wrap"><table>
         <thead><tr><th scope="col">When</th><th scope="col">What</th><th scope="col">Where</th></tr></thead>
@@ -62,7 +62,7 @@
   "use strict";
   var esc = CP.esc;
   var DAYS = ["Mon","Tue","Wed","Thu","Fri","Sat","Sun"];
-  var KIND = { meal:"🍲 Meal", pantry:"🥫 Pantry", fridge:"🧊 Fridge", box:"📦 Food box" };
+  var KIND = { meal:"Meal", pantry:"Pantry", fridge:"Fridge", box:"Food box" };
   var today = DAYS[(new Date().getDay() + 6) % 7];
   var sel = "";
 

@@ -1,21 +1,21 @@
 <!doctype html>
 <html lang="en" data-root=".">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chaffee Provides · Local food in Chaffee County, Colorado</title>
 <meta name="description" content="Find Chaffee County farms, ranches, farmers markets, restaurants and food assistance on one up-to-date map. A project of Guidestone Colorado.">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;1,200&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body data-page="index.html">
 <div id="site-header"></div>
 <main id="main">
   <section class="hero" style="background-image:url('https://chaffeeprovides.org/wp-content/uploads/2021/01/IMG_2883-scaled.jpg')">
-    <div class="wrap">
-      <h1>This land provides.</h1>
+    <div class="wrap"><div class="panel">
+      <h1>This Land Provides</h1>
       <p class="lede">Beef, eggs, garlic, greens, flowers and honey, grown in Chaffee County. Find the farms, ranches, markets and food programs near you.</p>
       <form class="search-bar" action="find-food.html" role="search">
         <label class="sr-only" for="hq">Search local food</label>
@@ -23,7 +23,7 @@
         <button class="btn btn-primary" type="submit">Find food</button>
       </form>
       <div class="notice"><strong>Need food now?</strong> Free meals, pantries and the 24/7 community fridge are listed by day on our <a href="food-assistance.html">food assistance page</a>. They're open to everyone, including anyone whose SNAP benefits are delayed.</div>
-    </div>
+    </div></div>
   </section>
 
   <section class="block">
@@ -96,11 +96,11 @@
     var all = d.providers.filter(function(p){ return p.status !== "likely_closed"; }), meta = d.meta;
     function count(field, key){ return all.filter(function(p){ return p[field].indexOf(key) !== -1; }).length; }
     document.getElementById("offerTiles").innerHTML = Object.keys(meta.offerings).filter(function(k){ return count("offerings",k); }).map(function(k){
-      return '<a class="tile" href="find-food.html?offering='+k+'"><span class="emoji" aria-hidden="true">'+(CP.OFFERING_EMOJI[k]||"")+'</span><strong>'+esc(meta.offerings[k])+'</strong><span class="count">'+places(count("offerings",k))+'</span></a>';
+      return '<a class="tile" href="find-food.html?offering='+k+'"><strong>'+esc(meta.offerings[k])+'</strong><span class="count">'+places(count("offerings",k))+'</span></a>';
     }).join("");
     document.getElementById("typeTiles").innerHTML = Object.keys(meta.types).filter(function(k){ return count("types",k); }).map(function(k){
       var st = CP.typeStyle(k);
-      return '<a class="tile" href="find-food.html?type='+k+'" style="border-top:4px solid '+st.hex+'"><span class="emoji" aria-hidden="true">'+st.emoji+'</span><strong>'+esc(meta.types[k])+'</strong><span class="count">'+places(count("types",k))+'</span></a>';
+      return '<a class="tile" href="find-food.html?type='+k+'"><strong><span class="dot" style="background:'+st.hex+'" aria-hidden="true"></span>'+esc(meta.types[k])+'</strong><span class="count">'+places(count("types",k))+'</span></a>';
     }).join("");
     var open = all.filter(CP.openThisMonth);
     document.getElementById("openIntro").textContent = open.length + " places list " + CP.thisMonth() + " in their season. Many more sell year-round by appointment.";

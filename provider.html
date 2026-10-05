@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en" data-root=".">
 <head>
-<meta name="robots" content="noindex, nofollow">
 <meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Provider · Chaffee Provides</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;1,200&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
 <link rel="stylesheet" href="assets/site.css">
 </head>
@@ -35,7 +35,7 @@
     }
     return '<span class="src">from '+esc(SRC[s] || s)+'</span>';
   }
-  function fact(ic, html, src){ return '<div class="fact"><span class="ic" aria-hidden="true">'+ic+'</span><div>'+html+(src||"")+'</div></div>'; }
+  function fact(ic, html, src){ return '<div class="fact"><span class="ic">'+ic+'</span><div>'+html+(src||"")+'</div></div>'; }
   function link(u, label){
     if(!/^https?:\/\//i.test(u)) return esc(label || u);  // never emit a relative "link" from bad data
     return '<a href="'+esc(u)+'" target="_blank" rel="noopener">'+esc(label || u.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,""))+'</a>'; }
@@ -48,10 +48,10 @@
 
     var types = p.types.map(function(t){
       var st = CP.typeStyle(t);
-      return '<a class="tag" style="color:'+st.color+';text-decoration:none" href="find-food.html?type='+t+'">'+st.emoji+' '+esc(meta.types[t])+'</a>';
+      return '<a class="tag" style="color:'+st.color+';text-decoration:none" href="find-food.html?type='+t+'">'+esc(meta.types[t])+'</a>';
     }).join(" &nbsp; ");
     var offers = p.offerings.map(function(o){
-      return '<a class="chip" href="find-food.html?offering='+o+'">'+(CP.OFFERING_EMOJI[o]||"")+' '+esc(meta.offerings[o])+'</a>';
+      return '<a class="chip" href="find-food.html?offering='+o+'">'+esc(meta.offerings[o])+'</a>';
     }).join(" ");
 
     var status = "";
@@ -66,16 +66,16 @@
     // Some addresses already end with the town ("..., Salida, CO 81201"); don't repeat it.
     var hasTown = p.address && p.town && p.address.toLowerCase().indexOf(p.town.toLowerCase()) !== -1;
     var addr = hasTown ? p.address : [p.address, p.town].filter(Boolean).join(", ");
-    if(addr) facts += fact("📍", esc(addr) + (p.county && p.city ? ", "+esc(p.county)+" County" : ""), srcNote(p,"Address"));
-    if(p.hours) facts += fact("🕒", esc(p.hours), srcNote(p,"Hours"));
-    if(p.monthsOpen.length) facts += fact("📅", esc(p.monthsOpen.length === 12 ? "Year-round" : p.monthsOpen.join(", ")), srcNote(p,"Months Open"));
-    if(p.phone) facts += fact("📞", '<a href="tel:'+esc(p.phone.replace(/[^0-9+]/g,""))+'">'+esc(p.phone)+'</a>'+(p.callFirst?' <em>(call first)</em>':''), srcNote(p,"Phone"));
-    if(p.email) facts += fact("✉️", '<a href="mailto:'+esc(p.email)+'">'+esc(p.email)+'</a>', srcNote(p,"Email"));
-    if(p.website) facts += fact("🌐", link(p.website), srcNote(p,"Website"));
+    if(addr) facts += fact("Address", esc(addr) + (p.county && p.city ? ", "+esc(p.county)+" County" : ""), srcNote(p,"Address"));
+    if(p.hours) facts += fact("Hours", esc(p.hours), srcNote(p,"Hours"));
+    if(p.monthsOpen.length) facts += fact("Season", esc(p.monthsOpen.length === 12 ? "Year-round" : p.monthsOpen.join(", ")), srcNote(p,"Months Open"));
+    if(p.phone) facts += fact("Phone", '<a href="tel:'+esc(p.phone.replace(/[^0-9+]/g,""))+'">'+esc(p.phone)+'</a>'+(p.callFirst?' <em>(call first)</em>':''), srcNote(p,"Phone"));
+    if(p.email) facts += fact("Email", '<a href="mailto:'+esc(p.email)+'">'+esc(p.email)+'</a>', srcNote(p,"Email"));
+    if(p.website) facts += fact("Website", link(p.website), srcNote(p,"Website"));
     var social = [p.facebook && link(p.facebook,"Facebook"), p.instagram && link(p.instagram,"Instagram")].filter(Boolean);
-    if(social.length) facts += fact("💬", social.join(" · "));
+    if(social.length) facts += fact("Social", social.join(" · "));
     var flags = [p.snap && "Accepts SNAP", p.organic && "Certified organic", p.ada && "ADA accessible"].filter(Boolean);
-    if(flags.length) facts += fact("✅", flags.map(esc).join(" · "));
+    if(flags.length) facts += fact("Also", flags.map(esc).join(" · "));
 
     var related = all.filter(function(x){
       return x !== p && x.status !== "likely_closed" && x.offerings.some(function(o){ return p.offerings.indexOf(o) !== -1; });
@@ -91,7 +91,7 @@
       +   (offers ? '<div style="display:flex;gap:6px;flex-wrap:wrap;margin-top:10px">'+offers+'</div>' : '')
       +   (p.notes ? '<h2 style="font-size:1.25rem;margin-top:24px">About</h2><p style="white-space:pre-line">'+esc(p.notes)+'</p>' : '')
       +   '<div class="facts">'+facts+'</div>'
-      +   '<p style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="'+CP.directions(p)+'" target="_blank" rel="noopener">🧭 Directions</a>'
+      +   '<p style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn btn-primary" href="'+CP.directions(p)+'" target="_blank" rel="noopener">Directions</a>'
       +   '<a class="btn btn-ghost" href="mailto:info@guidestonecolorado.org?subject='+encodeURIComponent("Listing update: "+p.name)+'">Suggest an update</a></p>'
       + '</div><div>'
       +   (p.lat != null ? '<div id="mini" class="mini-map" role="img" aria-label="Map showing '+esc(p.name)+'"></div>' : '<div class="callout">No map location yet — this listing has no street address we could place.</div>')

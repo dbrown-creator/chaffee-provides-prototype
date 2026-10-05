@@ -35,7 +35,7 @@
     return '<a class="skip" href="#main">Skip to content</a>'
       + '<div class="draft" role="note"><strong>Prototype for review</strong> — a proposed redesign of ChaffeeProvides.org, prepared by Colorado Farm Trail for Guidestone Colorado. Not the official site: visit <a href="https://chaffeeprovides.org">chaffeeprovides.org</a>.</div>'
       + '<header class="site-header"><div class="wrap">'
-      + '<a class="brand" href="'+url("index.html")+'"><span class="name">Chaffee Provides</span><span class="tag">This land provides</span></a>'
+      + '<a class="brand" href="'+url("index.html")+'"><span class="name">Chaffee Provides</span></a>'
       + '<button class="menu-btn" aria-expanded="false" aria-controls="sitenav">Menu</button>'
       + '<nav class="nav" id="sitenav" aria-label="Main">'+links+'</nav>'
       + '</div></header>';
@@ -88,17 +88,25 @@
   function typeStyle(t){ return TYPE_STYLE[t] || TYPE_STYLE.community; }
   function pinIcon(t){
     var st = typeStyle(t);
-    return L.divIcon({ className:"", iconSize:[28,28], iconAnchor:[14,28], popupAnchor:[0,-26],
-      html:'<div class="pin" style="background:'+st.hex+'"><span>'+st.emoji+'</span></div>' });
+    return L.divIcon({ className:"", iconSize:[22,22], iconAnchor:[11,22], popupAnchor:[0,-20],
+      html:'<div class="pin" style="background:'+st.hex+'"></div>' });
   }
+  // Basemaps. Default: OpenStreetMap's standard map (the reviewer's pick), in light and dark
+  // mode alike. ?basemap=streets (Esri World Street Map) or ?basemap=voyager (CARTO, the
+  // Farm Trail's map) on any page to compare.
+  var BASEMAPS = {
+    voyager: { url:"https://basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png?key=cb1_3vh9_1_2876c53a17aa6fd35517591d",
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>', maxZoom:19 },
+    streets: { url:"https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}",
+      attribution:'Tiles &copy; <a href="https://www.esri.com/">Esri</a>, HERE, Garmin, USGS, &copy; OpenStreetMap', maxZoom:19 },
+    osm: { url:"https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>', maxZoom:19 }
+  };
   function basemap(map){
-    // CARTO Voyager (light) — same keyed CARTO account the Farm Trail map uses.
-    var KEY = "cb1_3vh9_1_2876c53a17aa6fd35517591d";
-    var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return L.tileLayer("https://basemaps.cartocdn.com/rastertiles/"+(dark?"dark_all":"voyager")+"/{z}/{x}/{y}{r}.png?key="+KEY, {
-      maxZoom:19,
-      attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
-    }).addTo(map);
+    // Keep the required map credit, but drop Leaflet's own "Leaflet" prefix.
+    if (map.attributionControl) map.attributionControl.setPrefix(false);
+    var b = BASEMAPS[new URLSearchParams(location.search).get("basemap")] || BASEMAPS.osm;
+    return L.tileLayer(b.url, { maxZoom:b.maxZoom, attribution:b.attribution }).addTo(map);
   }
   // Chaffee County boundary (US Census TIGERweb, GEOID 08015, simplified ~80 m).
   // Draws the county line and softly dims everything outside it. Non-interactive so it
@@ -107,12 +115,12 @@
     return load("chaffee-county").then(function(gj){
       var ring = gj.features[0].geometry.coordinates[0].map(function(c){ return [c[1], c[0]]; });
       if(!map.getPane("county")){ map.createPane("county"); map.getPane("county").style.zIndex = 350; }
-      var dark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+      // The basemap is light in both color schemes now, so one light style for the outline.
       var world = [[-89.9,-179.9],[-89.9,179.9],[89.9,179.9],[89.9,-179.9]];
       L.polygon([world, ring], { pane:"county", interactive:false, stroke:false,
-        fillColor: dark ? "#000" : "#1f2a1f", fillOpacity: dark ? .35 : .14 }).addTo(map);
+        fillColor:"#1f2a1f", fillOpacity:.1 }).addTo(map);
       var line = L.polygon(ring, { pane:"county", interactive:false, fill:false,
-        color: dark ? "#94c79e" : "#2f5d3a", weight:2.5, opacity:.9, dashArray:"6 5" }).addTo(map);
+        color:"#2f5d3a", weight:2.5, opacity:.9, dashArray:"6 5" }).addTo(map);
       return line;
     }).catch(function(){ return null; });  // the map still works without the outline
   }

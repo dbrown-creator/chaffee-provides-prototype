@@ -1,7 +1,7 @@
 {
  "meta": {
-  "generated": "2026-10-03",
-  "count": 39,
+  "generated": "2026-10-04",
+  "count": 43,
   "types": {
    "farm": "Farms & Ranches",
    "market": "Markets & Shops",
@@ -61,7 +61,8 @@
    "lng": -106.1330412,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "official-site:https://www.avcmbv.org/",
@@ -80,7 +81,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "assistance"
@@ -113,7 +115,8 @@
    "lng": -106.0742298,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Phone": "official-site:https://www.arrowpointcattle.com/contact",
@@ -133,7 +136,8 @@
    "town": "Nathrop",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -224,7 +228,8 @@
    "lat": 38.536236604798,
    "lng": -105.99158301805,
    "sources": [
-    "curated"
+    "curated",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Business Name": "curated",
@@ -243,10 +248,11 @@
    "id": "banyan-breads",
    "town": "Salida",
    "sourceLabels": [
-    "curated"
+    "Farmers market vendor lists, checked by hand",
+    "Colorado Proud"
    ],
    "types": [
-    "community"
+    "market"
    ],
    "offerings": [
     "staples"
@@ -262,23 +268,25 @@
    "city": "Buena Vista",
    "county": "Chaffee",
    "zip": "81211",
-   "phone": "",
+   "phone": "(720) 382-4782",
    "callFirst": false,
    "website": "https://www.buckandbloomcheese.com/",
    "email": "buckandbloomcheese@gmail.com",
-   "facebook": "",
+   "facebook": "https://www.facebook.com/people/Buck-Bloom-Cheese-Co/61578967916917/",
    "instagram": "https://www.instagram.com/buckandbloomcheese/",
    "hours": "",
    "monthsOpen": [],
    "products": "Artisan goat and cow cheeses (chèvre, fromage blanc, goat feta, bloomy rinds, pepperjack, cave-aged), eggs",
    "organic": false,
-   "snap": false,
+   "snap": true,
    "ada": false,
-   "notes": "Creamery at the BV Farm General Store (open 7 days; farm tours by booking). Reopened spring 2025 in the former Jumpin' Good Goat Dairy facility.",
-   "lat": 38.879322654238,
-   "lng": -106.160984701324,
+   "notes": "Creamery at the BV Farm General Store (self-serve farm store). Public farm tours on scheduled Saturdays at 10am ($25 adults, $15 ages 3–17, under 3 free), booked through the sign-up form on the website's Tour page. Reopened spring 2025 in the former Jumpin' Good Goat Dairy facility.",
+   "lat": 38.8780992,
+   "lng": -106.1626311,
    "sources": [
-    "curated"
+    "curated",
+    "colorado_proud_finder",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Business Name": "curated",
@@ -290,15 +298,19 @@
     "Instagram": "curated",
     "Products": "curated",
     "Notes": "curated",
+    "Phone": "colorado_proud_finder",
+    "Facebook": "colorado_proud_finder",
+    "SNAP": "colorado_proud_finder",
     "County": "census-geocoder"
    },
-   "geoSource": "census-geocoder",
+   "geoSource": "source",
    "status": "unverified",
    "verified": "",
    "id": "buck-and-bloom-cheese-co",
    "town": "Buena Vista",
    "sourceLabels": [
-    "curated"
+    "Farmers market vendor lists, checked by hand",
+    "Colorado Proud"
    ],
    "types": [
     "farm",
@@ -315,18 +327,19 @@
    "categories": [
     "Farmers' Market"
    ],
-   "address": "Columbine Park, 51 Linderman Ave, Buena Vista, CO 81211",
+   "address": "Turner Farm & Apple Orchard, 829 W Main St",
    "city": "Buena Vista",
    "county": "Chaffee",
    "zip": "81211",
-   "phone": "(913) 904-8207",
+   "phone": "(719) 297-5430",
    "callFirst": false,
-   "website": "https://www.foodshedalliance.com/",
-   "email": "info@foodshedalliance.com",
-   "facebook": "https://www.facebook.com/FoodshedAllianceCO/",
-   "instagram": "https://www.instagram.com/buena_vista_farmers_market/",
-   "hours": "Sat: 9:00am - 1:00pm",
+   "website": "https://www.buenavistaheritage.org/",
+   "email": "buenavistaheritage@msn.com",
+   "facebook": "",
+   "instagram": "",
+   "hours": "Sun: 9:00am - 1:00pm (May 31 - Oct 25)",
    "monthsOpen": [
+    "May",
     "June",
     "July",
     "August",
@@ -337,40 +350,46 @@
    "organic": false,
    "snap": false,
    "ada": false,
-   "notes": "",
-   "lat": 38.841753019411925,
-   "lng": -106.11883101338466,
+   "notes": "Run by Buena Vista Heritage at the historic Turner Farm & Apple Orchard since 2026, with a Kids' Market. Foodshed Alliance, which ran it at Columbine Park, dropped the market after 2025. Phone is the market contact (Amy).",
+   "lat": 38.839043715714,
+   "lng": -106.141712220022,
    "sources": [
     "official-site",
-    "usda"
+    "usda",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
-    "Address": "official-site:https://arkvalleyvoice.com/first-buena-vista-farmers-market-of-the-season-is-coming-to-columbine-park-on-june-7/",
-    "Phone": "official-site:https://www.foodshedalliance.com/contact",
-    "Website": "official-site:https://www.foodshedalliance.com/meet-our-vendors",
-    "Email": "official-site:https://www.foodshedalliance.com/contact",
-    "Facebook": "official-site:https://www.facebook.com/FoodshedAllianceCO/",
-    "Instagram": "official-site:https://www.instagram.com/buena_vista_farmers_market/",
-    "Hours": "official-site:https://arkvalleyvoice.com/first-buena-vista-farmers-market-of-the-season-is-coming-to-columbine-park-on-june-7/",
-    "Months Open": "official-site:https://arkvalleyvoice.com/first-buena-vista-farmers-market-of-the-season-is-coming-to-columbine-park-on-june-7/",
+    "Address": "override",
+    "Phone": "override",
+    "Website": "override",
+    "Email": "override",
+    "Facebook": "override",
+    "Instagram": "override",
+    "Hours": "override",
+    "Months Open": "override",
     "Products": "official-site:https://arkvalleyvoice.com/first-buena-vista-farmers-market-of-the-season-is-coming-to-columbine-park-on-june-7/",
     "Zip": "usda",
-    "County": "census-geocoder"
+    "County": "census-geocoder",
+    "Notes": "override",
+    "Latitude": "override",
+    "Longitude": "override"
    },
-   "geoSource": "source",
+   "geoSource": "override",
    "status": "unknown",
    "verified": "",
    "id": "buena-vista-farmers-market",
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "USDA Local Food Directories"
+    "USDA Local Food Directories",
+    "Colorado Proud"
    ],
    "types": [
     "market"
    ],
    "offerings": [
-    "veggies"
+    "veggies",
+    "fruit"
    ]
   },
   {
@@ -384,7 +403,7 @@
    "zip": "81201",
    "phone": "(719) 539-3686",
    "callFirst": false,
-   "website": "http://salidacaringsharing.org/the-resource-center/",
+   "website": "",
    "email": "salidacs@gmail.com",
    "facebook": "",
    "instagram": "",
@@ -399,7 +418,8 @@
    "lng": -105.9953842,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Phone": "chaffee_provides",
@@ -407,7 +427,7 @@
     "Notes": "chaffee_provides",
     "Address": "chaffee_provides",
     "Zip": "chaffee_provides",
-    "Website": "chaffee_provides",
+    "Website": "override",
     "Products": "chaffee_provides",
     "County": "census-geocoder"
    },
@@ -418,7 +438,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "assistance"
@@ -456,7 +477,8 @@
    "lng": -105.9916776,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Phone": "chaffee_provides",
@@ -473,7 +495,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "community"
@@ -487,7 +510,7 @@
    "categories": [
     "On-Farm / Ranch Sales"
    ],
-   "address": "PO Box 826, Salida, CO 81201 (mailing address)",
+   "address": "7750 County Road 150",
    "city": "Salida",
    "county": "Chaffee",
    "zip": "81201",
@@ -508,10 +531,11 @@
    "lng": -106.0198285,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
-    "Address": "official-site:http://coloradofarmtotable.org/",
+    "Address": "override",
     "Phone": "official-site:http://coloradofarmtotable.org/",
     "Email": "official-site:http://coloradofarmtotable.org/",
     "Facebook": "official-site:http://coloradofarmtotable.org/",
@@ -529,7 +553,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -605,7 +630,7 @@
    "zip": "81201",
    "phone": "(719) 221-3158",
    "callFirst": false,
-   "website": "http://www.copperkettleapothecary.com",
+   "website": "",
    "email": "Copperkettleapothecary4@gmail.com",
    "facebook": "https://www.facebook.com/copperkettleapothecary/",
    "instagram": "",
@@ -620,14 +645,15 @@
    "lng": -105.9923509,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Facebook": "official-site:https://www.facebook.com/copperkettleapothecary/",
     "Address": "chaffee_provides",
     "Zip": "chaffee_provides",
     "Phone": "chaffee_provides",
-    "Website": "chaffee_provides",
+    "Website": "override",
     "Email": "chaffee_provides",
     "Products": "chaffee_provides",
     "Notes": "chaffee_provides",
@@ -640,7 +666,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -675,7 +702,8 @@
    "lng": -106.1673061,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Facebook": "official-site:https://cottonwoodspiritranch.com",
@@ -693,7 +721,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -732,7 +761,8 @@
    "lng": -106.1195484,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "official-site:https://eddylinebrewery.com/pages/restaurant-menu-board",
@@ -754,7 +784,8 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "dining"
@@ -763,6 +794,62 @@
     "veggies",
     "beef-meat"
    ]
+  },
+  {
+   "name": "Elements Mountain Compost",
+   "categories": [
+    "On-Farm / Ranch Sales",
+    "Food Maker"
+   ],
+   "address": "9255 County Road 140",
+   "city": "Salida",
+   "county": "Chaffee",
+   "zip": "81201",
+   "phone": "(719) 207-2207",
+   "callFirst": false,
+   "website": "http://elementscompost.com",
+   "email": "",
+   "facebook": "https://www.facebook.com/elementsmountaincompost",
+   "instagram": "https://www.instagram.com/elementscompost/",
+   "hours": "",
+   "monthsOpen": [],
+   "products": "Crops & Agricultural Products, Processing, Production & Manufacturing, School Tours, Tours, Value-Added Non-Food Products",
+   "organic": false,
+   "snap": false,
+   "ada": false,
+   "notes": "Elements Mountain Compost works with businesses and residents to reduce their carbon footprint by diverting organic waste from the landfill and creating nutrient-rich compost and soil amendments.",
+   "lat": 38.534553,
+   "lng": -106.050589,
+   "sources": [
+    "colorado_proud_finder",
+    "colorado_proud_farm_fresh"
+   ],
+   "provenance": {
+    "Business Name": "colorado_proud_finder",
+    "Address": "colorado_proud_finder",
+    "City": "colorado_proud_finder",
+    "Zip": "colorado_proud_finder",
+    "Phone": "colorado_proud_finder",
+    "Website": "colorado_proud_finder",
+    "Facebook": "colorado_proud_finder",
+    "Instagram": "colorado_proud_finder",
+    "Products": "colorado_proud_finder",
+    "Notes": "colorado_proud_finder",
+    "County": "census-geocoder"
+   },
+   "geoSource": "source",
+   "status": "unverified",
+   "verified": "",
+   "id": "elements-mountain-compost",
+   "town": "Salida",
+   "sourceLabels": [
+    "Colorado Proud"
+   ],
+   "types": [
+    "farm",
+    "market"
+   ],
+   "offerings": []
   },
   {
    "name": "Everett Ranch Beef",
@@ -790,7 +877,8 @@
    "lng": -106.046544,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Facebook": "official-site:https://www.facebook.com/everettranchbeef/",
@@ -807,7 +895,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -819,18 +908,18 @@
   {
    "name": "Guidestone Colorado",
    "categories": [
-    "Organization",
     "Agritourism",
     "On-Farm / Ranch Sales",
-    "Sells to Schools"
+    "Sells to Schools",
+    "Organization"
    ],
-   "address": "PO Box 1056",
+   "address": "8913 West Hwy 50",
    "city": "Salida",
    "county": "Chaffee",
    "zip": "81201",
    "phone": "(719) 239-0955",
    "callFirst": false,
-   "website": "http://www.GuidestoneColorado.org",
+   "website": "https://www.GuidestoneColorado.org",
    "email": "info@guidestonecolorado.org",
    "facebook": "https://www.facebook.com/guidestonecolorado/",
    "instagram": "https://www.instagram.com/guidestonecolorado/",
@@ -847,33 +936,34 @@
     "April",
     "November"
    ],
-   "products": "Veggies",
+   "products": "Beets, Bell Peppers, Broccoli, Brussels Sprouts, Cabbage, Carrots, Cauliflower, Celery, Cucumbers, Eggplant, Garlic, Green Beans, Herbs, Kale, Leeks, Lettuce, Microgreens, Onions, Peas, Potatoes, Pumpkins, Radishes, Rhubarb, Spinach, Squash, Tomatoes, Turnips, Zucchini, Beef, Cider, The cider is specifically in conjunction with our annual Pumpkin Patch & Harvest Festival in October",
    "organic": false,
    "snap": true,
    "ada": true,
-   "notes": "Guidestone Colorado is a Chaffee County-based, 501c3 nonprofit dedicated to growing a vibrant agricultural future through education, community building and partnerships. We serve our local community and the statewide agriculture community through our four cornerstone programs: Farm to School, Farmhands Education, Colorado Land Link, and the Hutchinson Homestead & Learning Center. The Farm to School Program fosters garden education at two school gardens and the Community & School Farm, and grows produce for Salida School District, ensuring access to local produce in school meals. Guidestone’s food production activities also include growing food for the Heart of the Rockies Regional Medical Center, supporting area CSAs and community members in growing and purchasing local food, and working with community partners on food distribution. Guidestone’s additional food system work in Chaffee County includes implementing and participating in the Chaffee Local Food Coalition, partnering with City of Salida on their Community Garden Program, and serving as a partner on several regional food system collaborations.",
-   "lat": 38.524029423773,
-   "lng": -105.992164177391,
+   "notes": "Guidestone Colorado operates the Hutchinson Homestead & Learning Center, a 150 year old historic homestead where the history of the land comes to life through education programs, heritage tours and community events like the annual Pumpkin Patch & Harvest Festival. Guidestone's farmstand is open Tuesdays 4-6pm, May-October.",
+   "lat": 38.53883153513492,
+   "lng": -106.18720074498013,
    "sources": [
     "official-site",
+    "colorado_proud_farm_fresh",
     "chaffee_provides",
-    "usda",
-    "colorado_proud_farm_fresh"
+    "usda"
    ],
    "provenance": {
     "Phone": "official-site:https://www.guidestonecolorado.org/",
     "Email": "official-site:https://www.guidestonecolorado.org/",
     "Facebook": "official-site:https://www.guidestonecolorado.org/",
     "Instagram": "official-site:https://www.guidestonecolorado.org/",
-    "Address": "chaffee_provides",
-    "Zip": "chaffee_provides",
-    "Website": "chaffee_provides",
-    "Products": "chaffee_provides",
-    "Notes": "chaffee_provides",
-    "County": "census-geocoder",
+    "Address": "colorado_proud_farm_fresh",
+    "County": "colorado_proud_farm_fresh",
+    "Zip": "colorado_proud_farm_fresh",
+    "Website": "colorado_proud_farm_fresh",
     "Months Open": "colorado_proud_farm_fresh",
+    "Products": "colorado_proud_farm_fresh",
+    "Certified Organic": "colorado_proud_farm_fresh",
     "SNAP": "colorado_proud_farm_fresh",
-    "ADA Accessible": "colorado_proud_farm_fresh"
+    "ADA Accessible": "colorado_proud_farm_fresh",
+    "Notes": "colorado_proud_farm_fresh"
    },
    "geoSource": "source",
    "status": "active",
@@ -882,16 +972,19 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
+    "Colorado Proud",
     "Chaffee Provides",
-    "USDA Local Food Directories",
-    "Colorado Proud"
+    "USDA Local Food Directories"
    ],
    "types": [
     "farm",
     "community"
    ],
    "offerings": [
-    "veggies"
+    "veggies",
+    "beef-meat",
+    "flowers",
+    "spices-garlic"
    ]
   },
   {
@@ -920,7 +1013,8 @@
    "lng": -105.9921041,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Email": "chaffee_provides",
@@ -935,7 +1029,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "community"
@@ -968,7 +1063,8 @@
    "lng": -106.1311288,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Phone": "official-site:https://www.headwaterfarmco.com/contactus",
@@ -986,7 +1082,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1022,7 +1119,8 @@
    "lng": -106.0435714,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "official-site:https://www.hutchranchsalida.com/beef",
@@ -1045,7 +1143,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1080,7 +1179,8 @@
    "lng": -106.117607,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "chaffee_provides",
@@ -1099,7 +1199,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1133,7 +1234,8 @@
    "lat": 38.536706125788,
    "lng": -105.991271193061,
    "sources": [
-    "curated"
+    "curated",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Business Name": "curated",
@@ -1151,10 +1253,11 @@
    "id": "market-on-main-st-the-triangle-oasis",
    "town": "Salida",
    "sourceLabels": [
-    "curated"
+    "Farmers market vendor lists, checked by hand",
+    "Colorado Proud"
    ],
    "types": [
-    "community"
+    "market"
    ],
    "offerings": [
     "veggies",
@@ -1187,7 +1290,8 @@
    "lng": -106.1554058,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Facebook": "official-site:https://www.facebook.com/meadowsedgefarmbv/",
@@ -1207,13 +1311,71 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
    ],
    "offerings": [
     "veggies",
+    "spices-garlic"
+   ]
+  },
+  {
+   "name": "Moonstone Farm",
+   "categories": [
+    "On-Farm / Ranch Sales"
+   ],
+   "address": "",
+   "city": "Salida",
+   "county": "Chaffee",
+   "zip": "",
+   "phone": "(719) 239-2021",
+   "callFirst": false,
+   "website": "",
+   "email": "jen@moonstoneventures.com",
+   "facebook": "",
+   "instagram": "",
+   "hours": "",
+   "monthsOpen": [],
+   "products": "Flowers, Poultry/Eggs, Spices/Garlic, Veggies",
+   "organic": false,
+   "snap": false,
+   "ada": false,
+   "notes": "Moonstone Farm is owned and operated by Jen Visitacion in Salida. Jen runs a small CSA and buyers club and offers on farm events & workshops, a farm-stay in the historic barn turned retreat cottage.",
+   "lat": 38.5240098,
+   "lng": -105.9986479,
+   "sources": [
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
+   ],
+   "provenance": {
+    "Business Name": "chaffee_provides",
+    "Phone": "maintainer",
+    "Email": "chaffee_provides",
+    "Website": "chaffee_provides",
+    "Products": "chaffee_provides",
+    "Notes": "chaffee_provides",
+    "City": "maintainer",
+    "County": "census-geocoder"
+   },
+   "geoSource": "source",
+   "status": "unverified",
+   "verified": "",
+   "id": "moonstone-farm",
+   "town": "Salida",
+   "sourceLabels": [
+    "Chaffee Provides",
+    "Colorado Proud"
+   ],
+   "types": [
+    "farm"
+   ],
+   "offerings": [
+    "veggies",
+    "poultry-eggs",
+    "flowers",
     "spices-garlic"
    ]
   },
@@ -1243,7 +1405,8 @@
    "lng": -106.0830097,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Phone": "official-site:https://mountaingoatlodge.com",
@@ -1262,7 +1425,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1297,7 +1461,8 @@
    "lng": -106.1617464,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Facebook": "official-site:https://www.mushroomloveco.com/",
@@ -1315,7 +1480,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1350,7 +1516,8 @@
    "lng": -106.0425447,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Instagram": "official-site:https://www.instagram.com/phytologyflowers/",
@@ -1369,7 +1536,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1405,7 +1573,8 @@
    "lng": -105.991406,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Phone": "official-site:https://www.gopfca.com/",
@@ -1422,7 +1591,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "assistance"
@@ -1455,7 +1625,8 @@
    "lng": -106.0768953,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Phone": "official-site:https://ponchacreekgardens.wordpress.com/",
@@ -1475,7 +1646,8 @@
    "town": "Poncha Springs",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1489,10 +1661,10 @@
   {
    "name": "Rocky Mountain Garlic",
    "categories": [
-    "On-Farm / Ranch Sales",
     "CSA Farm",
     "Roadside Market",
-    "Garden Center / Greenhouse"
+    "Garden Center / Greenhouse",
+    "On-Farm / Ranch Sales"
    ],
    "address": "9241 County Road 156",
    "city": "Salida",
@@ -1500,7 +1672,7 @@
    "zip": "81201",
    "phone": "(719) 221-6943",
    "callFirst": false,
-   "website": "http://rockymountaingarlic.net/",
+   "website": "https://www.rockymountaingarlic.net/",
    "email": "rockymountaingarlicllc@gmail.com",
    "facebook": "https://www.facebook.com/RockyMountainGarlic",
    "instagram": "https://www.instagram.com/rockymountaingarlic1",
@@ -1518,27 +1690,30 @@
    "organic": false,
    "snap": false,
    "ada": false,
-   "notes": "Growing gourmet garlic in Salida, Rocky Mountain Garlic specializes in hard neck Garlic as well as Shallots and Onions. Last season, we experimented with many different root crops and are expanding into other hardy vegetables. We are offering “shares” for purchase! Please contact us for more information and to sign up. We — Mike and Tiffany Collette — grow following organic and biodynamic processes, using an earth-friendly mentality. Our garlic is tended by hand, one clove at a time, on land that is free of chemicals. We place much importance on minimal tillage using mulches, manures, and cover crops in order to hold nutrients and rejuvenate the soil. We use drip irrigation to conserve water and bring to market a unique crop of high desert garlic. From seed to harvest to storage, our garlic is grown for you and good for you. Our mission is to provide fresh and local food, grown by people you can meet face-to-face. It is the heritage of our country and we are proud to continue the tradition!",
-   "lat": 38.5521859,
-   "lng": -106.0108174,
+   "notes": "Rocky Mountain Garlic is a Certified Naturally Grown, low till, bio intensive vegetable market garden specializing in hardneck garlic. Our Farm Store is open 6 days a week, May - November. You can also find us every Saturday at the Salida Farmers Market at Alpine Park 8am-12pm, June - October.",
+   "lat": 38.55088257506522,
+   "lng": -106.01049240397752,
    "sources": [
     "official-site",
-    "chaffee_provides",
-    "colorado_proud_farm_fresh"
+    "colorado_proud_farm_fresh",
+    "chaffee_provides"
    ],
    "provenance": {
     "Email": "official-site:http://rockymountaingarlic.net/",
     "Facebook": "official-site:http://rockymountaingarlic.net/",
     "Instagram": "official-site:http://rockymountaingarlic.net/",
     "Products": "official-site:http://rockymountaingarlic.net/",
-    "Address": "chaffee_provides",
-    "Zip": "chaffee_provides",
-    "Phone": "chaffee_provides",
-    "Website": "chaffee_provides",
-    "Notes": "chaffee_provides",
-    "County": "census-geocoder",
+    "Address": "colorado_proud_farm_fresh",
+    "County": "colorado_proud_farm_fresh",
+    "Zip": "colorado_proud_farm_fresh",
+    "Phone": "colorado_proud_farm_fresh",
+    "Website": "override",
     "Hours": "colorado_proud_farm_fresh",
-    "Months Open": "colorado_proud_farm_fresh"
+    "Months Open": "colorado_proud_farm_fresh",
+    "Certified Organic": "colorado_proud_farm_fresh",
+    "SNAP": "colorado_proud_farm_fresh",
+    "ADA Accessible": "colorado_proud_farm_fresh",
+    "Notes": "colorado_proud_farm_fresh"
    },
    "geoSource": "source",
    "status": "active",
@@ -1547,8 +1722,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides",
-    "Colorado Proud"
+    "Colorado Proud",
+    "Chaffee Provides"
    ],
    "types": [
     "farm"
@@ -1584,7 +1759,8 @@
    "lng": -106.0619781,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Products": "official-site:http://www.salidacattlecompany.com",
@@ -1601,7 +1777,8 @@
    "town": "Chaffee County",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1638,16 +1815,16 @@
    "organic": false,
    "snap": true,
    "ada": true,
-   "notes": "Salidaâ€™s Farmers Market takes place at Alpine Park, a centrally located 2-acre park adjacent to Salidaâ€™s vibrant downtown. Filled with grass and trees, Alpine Park provides an easy and ideal retreat. This community-focused event invites you to fill your basket with fresh local food and connect with the community!",
+   "notes": "Salida’s Farmers Market takes place at Alpine Park, a centrally located 2-acre park adjacent to Salida’s vibrant downtown. Filled with grass and trees, Alpine Park provides an easy and ideal retreat. This community-focused event invites you to fill your basket with fresh local food and connect with the community!",
    "lat": 38.53305197700007,
    "lng": -105.99330412699999,
    "sources": [
     "official-site",
     "colorado_proud",
+    "colorado_proud_farm_fresh",
     "cfma",
     "chaffee_provides",
-    "usda",
-    "colorado_proud_farm_fresh"
+    "usda"
    ],
    "provenance": {
     "Address": "official-site:https://foodshedalliance.com",
@@ -1718,7 +1895,8 @@
    "lng": -105.9964061,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "official-site:https://www.salidapresbyterian.org/ministries/serving-our-community/",
@@ -1738,7 +1916,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "assistance"
@@ -1775,7 +1954,8 @@
    "lng": -106.0086696,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "official-site:http://www.scangameat.com/",
@@ -1795,7 +1975,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1886,7 +2067,8 @@
    "lng": -106.0430725,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "chaffee_provides",
@@ -1904,7 +2086,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -1913,6 +2096,59 @@
     "beef-meat",
     "poultry-eggs",
     "flowers",
+    "staples"
+   ]
+  },
+  {
+   "name": "The Ark Angel",
+   "categories": [
+    "Bakery"
+   ],
+   "address": "",
+   "city": "Buena Vista",
+   "county": "Chaffee",
+   "zip": "81211",
+   "phone": "",
+   "callFirst": false,
+   "website": "",
+   "email": "",
+   "facebook": "https://www.facebook.com/thearkangelco",
+   "instagram": "https://www.instagram.com/thearkangelco/",
+   "hours": "",
+   "monthsOpen": [],
+   "products": "Bread, Chocolate & Cocoa Products",
+   "organic": false,
+   "snap": false,
+   "ada": false,
+   "notes": "Microbakery offering sourdough breads and chocolates.",
+   "lat": 38.8422178,
+   "lng": -106.1311288,
+   "sources": [
+    "colorado_proud_finder",
+    "colorado_proud_farm_fresh"
+   ],
+   "provenance": {
+    "Business Name": "colorado_proud_finder",
+    "City": "colorado_proud_finder",
+    "Zip": "colorado_proud_finder",
+    "Facebook": "colorado_proud_finder",
+    "Instagram": "colorado_proud_finder",
+    "Products": "colorado_proud_finder",
+    "Notes": "colorado_proud_finder",
+    "County": "census-geocoder"
+   },
+   "geoSource": "source",
+   "status": "unverified",
+   "verified": "",
+   "id": "the-ark-angel",
+   "town": "Buena Vista",
+   "sourceLabels": [
+    "Colorado Proud"
+   ],
+   "types": [
+    "market"
+   ],
+   "offerings": [
     "staples"
    ]
   },
@@ -1942,7 +2178,8 @@
    "lng": -106.129602,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Instagram": "official-site:https://www.theasianpalate.com",
@@ -1963,7 +2200,8 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "dining"
@@ -1983,7 +2221,7 @@
    "zip": "81201",
    "phone": "(719) 207-2359",
    "callFirst": false,
-   "website": "http://www.thegraineryministries.org",
+   "website": "",
    "email": "lssurdez@bresnan.net",
    "facebook": "",
    "instagram": "",
@@ -1998,13 +2236,14 @@
    "lng": -106.001502,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "chaffee_provides",
     "Zip": "chaffee_provides",
     "Phone": "chaffee_provides",
-    "Website": "chaffee_provides",
+    "Website": "override",
     "Email": "chaffee_provides",
     "Products": "chaffee_provides",
     "Notes": "chaffee_provides",
@@ -2017,7 +2256,8 @@
    "town": "Salida",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "assistance"
@@ -2050,7 +2290,8 @@
    "lng": -106.1350754,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "official-site:http://www.thelettucehead.com",
@@ -2071,7 +2312,8 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "market"
@@ -2112,7 +2354,8 @@
    "lat": 38.561560417431,
    "lng": -106.036496197503,
    "sources": [
-    "curated"
+    "curated",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Business Name": "curated",
@@ -2133,7 +2376,8 @@
    "id": "the-triangle-oasis",
    "town": "Salida",
    "sourceLabels": [
-    "curated"
+    "Farmers market vendor lists, checked by hand",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -2171,7 +2415,8 @@
    "lng": -106.0948979,
    "sources": [
     "official-site",
-    "chaffee_provides"
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
    ],
    "provenance": {
     "Address": "official-site:https://www.troutcreekfarm.com",
@@ -2190,7 +2435,8 @@
    "town": "Buena Vista",
    "sourceLabels": [
     "Provider's own website",
-    "Chaffee Provides"
+    "Chaffee Provides",
+    "Colorado Proud"
    ],
    "types": [
     "farm"
@@ -2253,6 +2499,65 @@
     "beef-meat",
     "poultry-eggs",
     "dairy"
+   ]
+  },
+  {
+   "name": "Vino Salida Wine Cellars",
+   "categories": [
+    "Winery",
+    "Agritourism"
+   ],
+   "address": "10495 County Road 120",
+   "city": "Poncha Springs",
+   "county": "Chaffee",
+   "zip": "81242",
+   "phone": "(719) 539-6299",
+   "callFirst": false,
+   "website": "https://www.vinosalida.com",
+   "email": "",
+   "facebook": "https://www.facebook.com/vinosalidawinecellars",
+   "instagram": "https://www.instagram.com/vinosalidawinebar/",
+   "hours": "",
+   "monthsOpen": [],
+   "products": "Events, Wine",
+   "organic": false,
+   "snap": false,
+   "ada": false,
+   "notes": "Vino Salida Wine Cellars values community and fun. We lovingly craft our wines and celebrate everyday in the scenic and serene Poncha Springs tasting room. Winemaker, Steve Flynn, has worked closely with Colorado grape producers to forge long lasting relationships. In the cellar, Steve's drive to craft quality products has led to many different styles of wine, all tasting unique and purely Coloradan.\n\nColorado's abundant sunshine, warm days, cool nights, and low humidity provide the perfect conditions for wine grapes that feature the complex character and chemistry required to craft award-winning wines. Vino Salida sources grapes from the two federally designated grape growing regions in Colorado: The Grand Valley AVA, including Grand Junction and Palisade, and the West Elks AVA, surrounding Paonia and Hotchkiss. We also bring in grapes from growers in the Southwest of the state near Ignacio and Cortez. We are proud to be part of Colorado's agritourism, offering wine tastings, winery tours, and private events.",
+   "lat": 38.5174706,
+   "lng": -106.0760658,
+   "sources": [
+    "colorado_proud_finder",
+    "colorado_proud_farm_fresh"
+   ],
+   "provenance": {
+    "Business Name": "colorado_proud_finder",
+    "Address": "colorado_proud_finder",
+    "City": "colorado_proud_finder",
+    "Zip": "colorado_proud_finder",
+    "Phone": "colorado_proud_finder",
+    "Website": "colorado_proud_finder",
+    "Facebook": "colorado_proud_finder",
+    "Instagram": "colorado_proud_finder",
+    "Products": "colorado_proud_finder",
+    "Notes": "colorado_proud_finder",
+    "County": "census-geocoder"
+   },
+   "geoSource": "source",
+   "status": "unverified",
+   "verified": "",
+   "id": "vino-salida-wine-cellars",
+   "town": "Poncha Springs",
+   "sourceLabels": [
+    "Colorado Proud"
+   ],
+   "types": [
+    "market",
+    "community"
+   ],
+   "offerings": [
+    "veggies",
+    "fruit"
    ]
   }
  ]
