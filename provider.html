@@ -26,7 +26,10 @@
   var SRC = { "chaffee_provides":"Chaffee Provides", "colorado_proud":"Colorado Proud", "colorado_proud_farm_fresh":"Colorado Proud",
     "cfma":"Colorado Farmers Market Association", "usda":"USDA local-food directory", "official-site":"provider's website",
     "dedup-decision":"reviewed by hand", "override":"a hand-checked correction", "census-geocoder":"US Census geocoder" };
+  // Per-detail source labels are switched off (reviewer's call); the page's source list stays.
+  var SHOW_FIELD_SOURCES = false;
   function srcNote(p, col){
+    if(!SHOW_FIELD_SOURCES) return "";
     var s = p.provenance && (p.provenance[col] || p.provenance[col.toLowerCase()]);
     if(!s) return "";
     if(s.indexOf("official-site:") === 0){
@@ -97,7 +100,7 @@
       +   (p.lat != null ? '<div id="mini" class="mini-map" role="img" aria-label="Map showing '+esc(p.name)+'"></div>' : '<div class="callout">No map location yet — this listing has no street address we could place.</div>')
       +   '<h2 style="font-size:1.1rem;margin-top:22px">Where this information comes from</h2><ul class="sources">'
       +   p.sourceLabels.map(function(s){ return '<li>'+esc(s)+'</li>'; }).join("")
-      +   '</ul><p class="muted" style="font-size:.88rem">When sources disagree, the provider\'s own website wins, then Colorado Proud, then other directories. Each detail above is labeled with its source.</p>'
+      +   '</ul><p class="muted" style="font-size:.88rem">When sources disagree, the provider\'s own website wins, then Colorado Proud, then other directories.</p>'
       +   (related.length ? '<h2 style="font-size:1.1rem;margin-top:22px">You might also like</h2><ul class="sources">'
             + related.map(function(r){ return '<li><a href="'+CP.providerUrl(r)+'">'+esc(r.name)+'</a> <span class="muted">· '+esc(r.town)+'</span></li>'; }).join("") + '</ul>' : '')
       + '</div></div>';

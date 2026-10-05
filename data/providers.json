@@ -1,7 +1,7 @@
 {
  "meta": {
-  "generated": "2026-10-04",
-  "count": 43,
+  "generated": "2026-10-05",
+  "count": 44,
   "types": {
    "farm": "Farms & Ranches",
    "market": "Markets & Shops",
@@ -1789,6 +1789,62 @@
    ]
   },
   {
+   "name": "Salida Community Center",
+   "categories": [
+    "Food Bank"
+   ],
+   "address": "305 F. Street",
+   "city": "Salida",
+   "county": "Chaffee",
+   "zip": "81201",
+   "phone": "(719) 539-3351",
+   "callFirst": false,
+   "website": "http://www.salidacommunitycenter.org",
+   "email": "salidacommunitycenter@yahoo.com",
+   "facebook": "",
+   "instagram": "",
+   "hours": "",
+   "monthsOpen": [],
+   "products": "Beef/Meat",
+   "organic": false,
+   "snap": false,
+   "ada": false,
+   "notes": "The Salida Senior Citizens, Inc. dba Salida Community Center distributes food on the first Wednesday of each month. Income requirements are followed. We ask that people stay in their cars and line up starting at Alpine Park. We start distribution around 10:00 a.m. and continue until noon or 1:00 p.m. Our food is provided to us by Care and Share Food Bank from Colorado Springs and the food selection contains meat, veggies, produce, bread and sweets. We also provide food to the youth of the area. At this time we are handing out and delivering food every Thursday to the youth in the area. Our other food program is the Community Corner Food Pantry. We received a grant in order to purchase food from local organizations and we hand out food from 10:00 a.m. until 2:00 p.m. at 305 F. Street. This program will only be continuing until the end of June.",
+   "lat": 38.5343414,
+   "lng": -105.9933303,
+   "sources": [
+    "chaffee_provides",
+    "colorado_proud_farm_fresh"
+   ],
+   "provenance": {
+    "Business Name": "chaffee_provides",
+    "Address": "chaffee_provides",
+    "Phone": "chaffee_provides",
+    "Email": "chaffee_provides",
+    "Website": "chaffee_provides",
+    "Products": "chaffee_provides",
+    "Notes": "chaffee_provides",
+    "City": "chaffee_provides",
+    "Zip": "chaffee_provides",
+    "County": "census-geocoder"
+   },
+   "geoSource": "source",
+   "status": "unverified",
+   "verified": "",
+   "id": "salida-community-center",
+   "town": "Salida",
+   "sourceLabels": [
+    "Chaffee Provides",
+    "Colorado Proud"
+   ],
+   "types": [
+    "assistance"
+   ],
+   "offerings": [
+    "beef-meat"
+   ]
+  },
+  {
    "name": "Salida Farmers Market",
    "categories": [
     "Farmers' Market"
@@ -1823,8 +1879,8 @@
     "colorado_proud",
     "colorado_proud_farm_fresh",
     "cfma",
-    "chaffee_provides",
-    "usda"
+    "usda",
+    "chaffee_provides"
    ],
    "provenance": {
     "Address": "official-site:https://foodshedalliance.com",
@@ -1852,8 +1908,8 @@
     "Provider's own website",
     "Colorado Proud",
     "Colorado Farmers Market Association",
-    "Chaffee Provides",
-    "USDA Local Food Directories"
+    "USDA Local Food Directories",
+    "Chaffee Provides"
    ],
    "types": [
     "market"

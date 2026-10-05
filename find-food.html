@@ -141,8 +141,23 @@ if (new URLSearchParams(location.search).get("embed") === "1") document.document
   function popup(p){
     return '<h4>'+esc(p.name)+'</h4><div style="margin-bottom:6px">'+typeLine(p)+'</div>'
       + (p.products ? '<div class="muted" style="font-size:.88rem">'+esc(p.products.slice(0,120))+(p.products.length>120?'…':'')+'</div>' : '')
-      + '<div style="margin-top:8px;display:flex;gap:12px"><a href="'+CP.providerUrl(p)+'">Details →</a>'
+      + (EMBED ? embedDetails(p) : '')
+      + '<div style="margin-top:8px;display:flex;gap:12px">'
+      + (EMBED ? '' : '<a href="'+CP.providerUrl(p)+'">Details →</a>')
       + '<a href="'+CP.directions(p)+'" target="_blank" rel="noopener">Directions</a></div>';
+  }
+  // The map-only view (?embed=1) stands alone: popups carry the key details instead of
+  // linking into the rest of the site.
+  var EMBED = document.documentElement.classList.contains("embed");
+  function embedDetails(p){
+    var rows = [];
+    var addr = p.address && p.town && p.address.indexOf(p.town) !== -1 ? p.address : [p.address, p.town].filter(Boolean).join(", ");
+    if(addr) rows.push(esc(addr));
+    if(p.hours) rows.push(esc(p.hours));
+    if(p.phone) rows.push('<a href="tel:'+esc(p.phone.replace(/[^0-9+]/g,""))+'">'+esc(p.phone)+'</a>');
+    var web = /^https?:\/\//i.test(p.website||"") ? p.website : (/^https?:\/\//i.test(p.facebook||"") ? p.facebook : "");
+    if(web) rows.push('<a href="'+esc(web)+'" target="_blank" rel="noopener">'+esc(web.replace(/^https?:\/\/(www\.)?/,"").replace(/\/$/,"").slice(0,40))+'</a>');
+    return rows.length ? '<div style="margin-top:6px;font-size:.88rem;line-height:1.45">'+rows.join("<br>")+'</div>' : '';
   }
 
   function apply(){
